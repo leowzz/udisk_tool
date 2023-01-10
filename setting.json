@@ -1,0 +1,11 @@
+{
+    "scan_dirs": [
+        "01_工具",
+        "02_环境",
+        "03_Tool"
+    ],
+    "from_drive": false,
+    "scan_root": "A:\\01_软件环境",
+    "auto_save": true,
+    "logging_level": 10
+}

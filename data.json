@@ -1,0 +1,1445 @@
+{
+    "A:\\01_软件环境\\01_工具": {
+        "dirs": [
+            "01_清理工具",
+            "03_压缩",
+            "Everything",
+            "PDF工具",
+            "Record",
+            "Shell工具",
+            "SQLite",
+            "USB",
+            "下载工具",
+            "代理器等",
+            "便携工具",
+            "其他软件",
+            "图像工具",
+            "图吧工具箱",
+            "屏幕拓展工具",
+            "录屏摄像",
+            "手机刷机",
+            "文件管理",
+            "文档工具",
+            "格式转换",
+            "流程图",
+            "浏览器",
+            "激活工具",
+            "火绒安全",
+            "硬盘工具",
+            "系统工具",
+            "脚本",
+            "视频工具",
+            "辅助工具",
+            "远程控制",
+            "键鼠工具",
+            "阿里云盘",
+            "驱动工具"
+        ],
+        "files": [
+            "2022-08-15_143624完成.md",
+            "微软商店.txt"
+        ]
+    },
+    "A:\\01_软件环境\\01_工具\\01_清理工具": {
+        "dirs": [],
+        "files": [
+            "CCleaner.exe",
+            "CCleanerClassicEdtion_Ver.1.10.20.0501.7z",
+            "CCleaner绿色版.zip",
+            "E恶意程序扫描工具SoftCnKiller_2.66.7z",
+            "FormatFactory_v5.4.5_绿色免安装.exe",
+            "geek.exe",
+            "HiBitUninstaller-v2.7.70.exe",
+            "IObitUninstaller.zip",
+            "IObitUnlocker.zip",
+            "J解除文件限制lockhuntersetup_3-4-3.exe",
+            "N内存清理MemEmpty.exe",
+            "N内存清理ReduceMemory.zip",
+            "N内存清理WiseMemorySetup_4.1.6.118.exe",
+            "N内存清理WMOSetup_4.1.8.121.exe",
+            "RAMMap.zip",
+            "TempCleaner.zip",
+            "Uninstall tool.exe",
+            "WizTree4.08.zip",
+            "wiztree_4_12_portable.zip",
+            "空间扫描工具SpaceSniffer.exe",
+            "空间扫描工具WizTree64.exe"
+        ]
+    },
+    "A:\\01_软件环境\\01_工具\\03_压缩": {
+        "dirs": [],
+        "files": [
+            "7-Zip32.zip",
+            "7-Zip64.zip",
+            "7z2102-x64.exe",
+            "7z2107-x64.exe",
+            "BANDIZIP-SETUP-STD-X64.EXE",
+            "Bandzip专业破解版.zip",
+            "winrar-x64-591scp.exe"
+        ]
+    },
+    "A:\\01_软件环境\\01_工具\\Everything": {
+        "dirs": [],
+        "files": [
+            "ES-1.1.0.26.zip",
+            "Everything-1.4.1.1005.x64-Setup.exe",
+            "EveryThing-1.5.0.13301.zip",
+            "Everything.zip",
+            "Everything_v1.5_首字母搜索a.7z"
+        ]
+    },
+    "A:\\01_软件环境\\01_工具\\PDF工具": {
+        "dirs": [],
+        "files": [
+            "PDFPatcher.1.0.0.4094.7z",
+            "PDFV_Portable.zip",
+            "PDFXChangeViewer.zip",
+            "PDFXEdit.zip",
+            "PDF工具PDF_Shaper_Professional_12.1_Portable.7z"
+        ]
+    },
+    "A:\\01_软件环境\\01_工具\\Record": {
+        "dirs": [],
+        "files": [
+            "00完成1.2.md",
+            "renameLog.txt"
+        ]
+    },
+    "A:\\01_软件环境\\01_工具\\Shell工具": {
+        "dirs": [],
+        "files": [
+            "cygwin_setup-x86_64.exe",
+            "FTP客户端FileZilla_Pro_3.60.2_64bit_Green.zip",
+            "lanzou-cmd_x64_v2.6.7.exe",
+            "MobaXterm_CHS.rar",
+            "PowerShell-7.4.0-preview.1-win-x64_2.msi",
+            "setup.log",
+            "setup.log.full",
+            "Xftp-7.0.0063p.exe",
+            "Xftp_6.0.0.191_Protable.zip",
+            "Xshell-7.0.0063.exe"
+        ]
+    },
+    "A:\\01_软件环境\\01_工具\\SQLite": {
+        "dirs": [],
+        "files": [
+            "sqlite.exe",
+            "SQLiteDatabaseBrowser32.zip",
+            "SQLiteDatabaseBrowser64.zip"
+        ]
+    },
+    "A:\\01_软件环境\\01_工具\\USB": {
+        "dirs": [
+            "grub",
+            "系统安装工具"
+        ],
+        "files": [
+            "Edgeless Hub_Beta_2.09.7z",
+            "Edgeless Hub_Beta_2.27.7z",
+            "grub.zip",
+            "PE工具箱.exe",
+            "PortableApps.com_Platform_Setup_22.0.1.paf.exe",
+            "rufus-3.14.exe",
+            "rufus-3.20.exe",
+            "SanDisk文件保险箱V3.01_win.zip",
+            "ULTRAISO.zip",
+            "USBCopyer-master.zip",
+            "USBWriter.exe",
+            "ventoy-1.0.63-windows.zip",
+            "ventoy-1.0.78-windows.zip",
+            "ventoy-1.0.80-windows.zip"
+        ]
+    },
+    "A:\\01_软件环境\\01_工具\\USB\\grub": {
+        "dirs": [],
+        "files": [
+            "distro.png",
+            "distro_Ubuntu.tar",
+            "distro_ventoy.tar",
+            "Tela-1080p.tar.xz",
+            "tela.jpg",
+            "Vimix-1080p.tar.xz",
+            "vimix.jpg",
+            "xenlism-grub-1080p-ubuntu.tar",
+            "xenlism.jpg"
+        ]
+    },
+    "A:\\01_软件环境\\01_工具\\USB\\系统安装工具": {
+        "dirs": [],
+        "files": [
+            "EasyBCD_v2.4绿色版.zip",
+            "ventoy_vhdboot虚拟硬盘启动插件.zip",
+            "WinNTSetup.zip",
+            "辅助视频.url"
+        ]
+    },
+    "A:\\01_软件环境\\01_工具\\下载工具": {
+        "dirs": [],
+        "files": [
+            "IDM - 适用于API下载.exe",
+            "IDM 6.33.2.zip",
+            "IDM_v6.39.8_Repack.exe",
+            "IDM破解直装版-6.40.8-2022年2月21日更新.7z",
+            "Motrix-Setup-1.6.11.exe",
+            "SoftDownloader.zip",
+            "Xdown - 适用于Aria下载.zip",
+            "X迅雷Thunder 11.1.12.1692 精简绿色版.exe",
+            "X迅雷不限速绿色版.zip",
+            "Y游戏下载器_pcstory5.0.zip",
+            "极下v3.5.zip"
+        ]
+    },
+    "A:\\01_软件环境\\01_工具\\代理器等": {
+        "dirs": [],
+        "files": [
+            "Clash.for.Windows.7z",
+            "Clash.for.Windows.Setup.0.19.17.exe",
+            "Clash.for.Windows.Setup.0.20.6.exe",
+            "fastgithub_win-x64.zip",
+            "GitHubDesktopSetup-x64.exe",
+            "GitHub加速DevSidecar-1.7.2.exe"
+        ]
+    },
+    "A:\\01_软件环境\\01_工具\\便携工具": {
+        "dirs": [
+            "PDF工具",
+            "win优化",
+            "win杂项工具",
+            "win美化",
+            "下载",
+            "卸载",
+            "图片浏览",
+            "学习笔记",
+            "效率工具",
+            "浏览器",
+            "音视频"
+        ],
+        "files": [
+            "介绍.md",
+            "介绍.txt"
+        ]
+    },
+    "A:\\01_软件环境\\01_工具\\便携工具\\PDF工具": {
+        "dirs": [],
+        "files": [
+            "CAJViewerPortable.zip",
+            "PDFXChangeViewer.zip"
+        ]
+    },
+    "A:\\01_软件环境\\01_工具\\便携工具\\win优化": {
+        "dirs": [],
+        "files": [
+            "Cacheman_v10.60.zip",
+            "Dism  .zip",
+            "Easy Service Optimizer_v1.2.zip",
+            "OOSU10.zip",
+            "Process Lasso_Pro.rar",
+            "ProcessLassoPtach_1.9.7z",
+            "ReduceMemory.zip",
+            "TempCleaner.zip"
+        ]
+    },
+    "A:\\01_软件环境\\01_工具\\便携工具\\win杂项工具": {
+        "dirs": [],
+        "files": [
+            "CCleanerClassicEdtion_Ver.1.10.20.0501.7z",
+            "ColorPicker.exe",
+            "ContextMenuManager.zip",
+            "DnsJumper.zip",
+            "ErrorLookup_2.3.3_setup.exe",
+            "Everything_1.4.1.988_x64.zip",
+            "FolderPainter.zip",
+            "RandomPW.zip",
+            "Unlocker_setup_1.1.2.exe",
+            "Win R Adde.zip",
+            "Windows10Manager_3.4.7.0_Portable.7z",
+            "WindowsDefenderControl_1.6_Green.zip",
+            "WindowsUpdateBlocker_1.6_Green.zip",
+            "WiseCare365.zip",
+            "傲梅分区.zip"
+        ]
+    },
+    "A:\\01_软件环境\\01_工具\\便携工具\\win美化": {
+        "dirs": [],
+        "files": [
+            "7tt.exe",
+            "FliqloScr_3.zip",
+            "StartIsBack_2.9.9_Setup.zip",
+            "T-Clock.zip",
+            "天选姬_TXMascot_B_V1.5.1.zip",
+            "更换系统字体.zip",
+            "软媒_Dock_精简版.exe"
+        ]
+    },
+    "A:\\01_软件环境\\01_工具\\便携工具\\下载": {
+        "dirs": [],
+        "files": [
+            "4_2_uTorrent.7z",
+            "IDM.zip",
+            "NeatDM_(P).exe",
+            "XDM.zip",
+            "迅雷.zip"
+        ]
+    },
+    "A:\\01_软件环境\\01_工具\\便携工具\\卸载": {
+        "dirs": [],
+        "files": [
+            "HiBitUninstaller_2.6.10.100_Single.exe",
+            "IObit Uninstaller_老毛子重新打包版.zip",
+            "Uninstall Tool_绿色版.rar"
+        ]
+    },
+    "A:\\01_软件环境\\01_工具\\便携工具\\图片浏览": {
+        "dirs": [],
+        "files": [
+            "Honeyview_5.35_Portable.7z",
+            "Image Eye.7z",
+            "JPEGView64.zip",
+            "Paint.net_4.2.14_Setup.zip",
+            "ps7.7z"
+        ]
+    },
+    "A:\\01_软件环境\\01_工具\\便携工具\\学习笔记": {
+        "dirs": [],
+        "files": [
+            "draw.io-14.6.13.exe",
+            "Fluent.Reader.Unpacked.1.0.1.x64.zip"
+        ]
+    },
+    "A:\\01_软件环境\\01_工具\\便携工具\\效率工具": {
+        "dirs": [],
+        "files": [
+            "AirPortal 4.21.2501 ia32.7z",
+            "CareUEyes.7z",
+            "Claunch_V4.02.zip",
+            "Maye_1.2.3_Green.7z",
+            "MouseInc2.10.21.7z",
+            "Notepad2_4.21.03r3646_64bit_Green.7z",
+            "QuickLook_3.6.11_Gneen.7z",
+            "Snipaste-2.3.5-Beta-x64.zip",
+            "stickies.7z"
+        ]
+    },
+    "A:\\01_软件环境\\01_工具\\便携工具\\浏览器": {
+        "dirs": [],
+        "files": [
+            "CCleaner Browser v91.0.9927.7z",
+            "Chrome_89.0.4389.90_64bit_Portable.7z",
+            "Firefox-89.0.2-2021062215.en-US.win32-tete009-x64-pgo.7z",
+            "Twinkstar_7.7.1000.2104_64bit_Portable.7z",
+            "Vivaldi Browser v2.11.1811.47_64bit.7z",
+            "浏览器一键优化工具(SpeedyFox)2.0.30.155汉化去广告版.rar"
+        ]
+    },
+    "A:\\01_软件环境\\01_工具\\便携工具\\音视频": {
+        "dirs": [],
+        "files": [
+            "FormatFactory_v5.4.5_绿色免安装.exe",
+            "listen1_2.21.0_64bit_Green.7z",
+            "MPC-BE.1.5.7.6180.zip",
+            "MPC-HC.1.9.1.x64.exe",
+            "MusicPlayer2_V2.71_x64.7z",
+            "YesPlayMusic_0.3.4_Green.7z",
+            "网易云音乐_2.7.5.198554_Green.7z"
+        ]
+    },
+    "A:\\01_软件环境\\01_工具\\其他软件": {
+        "dirs": [],
+        "files": [
+            "B哔哩哔哩UWP Ver4.3.10_x64.zip",
+            "CC助手_Setup-1.1.2-x64.exe",
+            "CHM文件制作.zip",
+            "CopyPath.reg",
+            "J驾校一点通.exe",
+            "KMCounter.ini",
+            "LANDrop_0.1.5.apk",
+            "Sandboxie-Plus-x64-v1.5.3.exe",
+            "sudoku.exe",
+            "S搜狗输入法v9.6a精简优化版.exe",
+            "S鼠标指针Posy_Cursors_15069.zip",
+            "S鼠标键盘统计KMCounter.exe",
+            "Tick5五子棋.zip",
+            "TIM3.3.0.21970.exe",
+            "Twinkle.Tray.v1.14.7.exe",
+            "T腾讯软件管理.exe",
+            "发票查验证书一键安装.exe",
+            "坚果云.exe"
+        ]
+    },
+    "A:\\01_软件环境\\01_工具\\图像工具": {
+        "dirs": [],
+        "files": [
+            "flameshot-12.1.0-1.debian-10.arm64.deb",
+            "LOGO设计软件.zip",
+            "RAW工具_Capture One 21(64bit).rar",
+            "SAI 2.0.exe",
+            "Snipaste.zip",
+            "T天若OCR文字识别_ncnn.7z",
+            "Waifu2x-Extension-GUI-v2.51.17-Setup_2.exe",
+            "Waifu2x-Extension-GUI-v2.52.16-Portable.7z",
+            "电脑图像处理工具箱.exe"
+        ]
+    },
+    "A:\\01_软件环境\\01_工具\\图吧工具箱": {
+        "dirs": [],
+        "files": [
+            "T图吧工具箱2020.05绿色版自动解压程序.exe",
+            "T图吧工具箱2021.04绿色版自动解压程序.exe",
+            "图吧工具箱2022.07绿色版自动解压程序.exe"
+        ]
+    },
+    "A:\\01_软件环境\\01_工具\\屏幕拓展工具": {
+        "dirs": [
+            "spacedesk",
+            "Wired_XDisplay"
+        ],
+        "files": []
+    },
+    "A:\\01_软件环境\\01_工具\\屏幕拓展工具\\spacedesk": {
+        "dirs": [],
+        "files": [
+            "spacedesk 汉化版.apk",
+            "spacedesk.apk",
+            "spacedesk.zip",
+            "spacedesk_driver_Win_10_64_v1017_BETA.msi",
+            "spacedesk_driver_Win_10_64_v1042_BETA.msi",
+            "spacedesk_driver_Win_10_64_v1050_BETA.msi",
+            "spacedesk_酷友汉化版.apk"
+        ]
+    },
+    "A:\\01_软件环境\\01_工具\\屏幕拓展工具\\Wired_XDisplay": {
+        "dirs": [],
+        "files": [
+            "Splashtop_Wired_XDisplay_Agent_v1.5.8.3.exe",
+            "Splashtop_Wired_XDisplay_Agent_v1.5.8.3_手机端.apk"
+        ]
+    },
+    "A:\\01_软件环境\\01_工具\\录屏摄像": {
+        "dirs": [
+            "OBS"
+        ],
+        "files": [
+            "Iriun WinWebcam-2.6.9.exe"
+        ]
+    },
+    "A:\\01_软件环境\\01_工具\\录屏摄像\\OBS": {
+        "dirs": [],
+        "files": [
+            "OBS-Studio-27.2.4-Full-Installer-x64.exe",
+            "obs-virtualcam-2.0.5-Windows-installer.exe"
+        ]
+    },
+    "A:\\01_软件环境\\01_工具\\手机刷机": {
+        "dirs": [],
+        "files": [
+            "G搞机助手_V4.8.3.zip",
+            "G搞机工具箱V8.10.7z",
+            "miflash_pro_3.3.1212.88_setup.exe",
+            "scrcpy-win64-v1.24.zip",
+            "TOOLS_BY_CZ_V7.32.7z",
+            "X小米助手_3.2.522.32_setup.exe"
+        ]
+    },
+    "A:\\01_软件环境\\01_工具\\文件管理": {
+        "dirs": [
+            "chfs"
+        ],
+        "files": [
+            "C批量重命名.exe",
+            "C重命名工具Advanced Renamer.exe",
+            "DropIt_v8.5.1_Setup.exe",
+            "Files.Package_2.3.0.0_x86_x64_arm64_Sideload.msixbundle",
+            "FileZilla_Pro_3.60.2_64bit_Green.zip",
+            "FreeFileSync.zip",
+            "FreeFileSync_11.26_Windows_Setup.exe",
+            "GUI_achieveV1.1.exe",
+            "Listary.exe",
+            "Q-Dir.zip",
+            "Q-Dir_Installer_x64_多页文件管理.exe",
+            "syncthing-windows-amd64-v1.20.2.zip",
+            "windows-amd64-filebrowser.zip",
+            "W文件备份工具FileGee_11.0.exe",
+            "W文件管理器XYplorer_23.00.0100_Portable.7z",
+            "Xftp_6.0.0.191_Protable.zip"
+        ]
+    },
+    "A:\\01_软件环境\\01_工具\\文件管理\\chfs": {
+        "dirs": [],
+        "files": [
+            "chfs-gui-CuteHttpFileServer.exe",
+            "chfs-linux-amd64-2.0.zip",
+            "chfs-windows-x64-2.0.zip",
+            "gui-chfs-windows.zip"
+        ]
+    },
+    "A:\\01_软件环境\\01_工具\\文档工具": {
+        "dirs": [
+            "Notepad3_5.21.1129.1_Portable",
+            "pandoc_linux"
+        ],
+        "files": [
+            "CAJViewerPortable.zip",
+            "D电子书格式转换NeatConverter_4.0.1_Portable.7z",
+            "EmEditor64_21.9.0_portable.zip",
+            "EndNote X9.1.rar",
+            "F方方格子 Excel工具箱 V3.7.1.0.rar",
+            "L论文查重.zip",
+            "notepad2.zip",
+            "Notepad3_5.21.1129.1_Portable.zip",
+            "Notepad3_5.21.1129.1_x64_Setup.exe",
+            "npp.7.5.4.Installer.x64.exe",
+            "Office2021(64bit).zip",
+            "pandoc-2.19.2-windows-x86_64.msi",
+            "qtCopyText_v1.2.1.exe",
+            "typora-setup-x64.exe",
+            "Typora_1.2.5.zip",
+            "typora白嫖1.2.4_by 落虾与孤鹜齐飞.zip",
+            "W.P.S.10578.12012.2019.exe",
+            "W文献翻译工具CopyTranslator_V10.0.0.3.rar",
+            "Zotero-6.0.18_setup.exe",
+            "稻壳阅读器安装程序.exe"
+        ]
+    },
+    "A:\\01_软件环境\\01_工具\\文档工具\\Notepad3_5.21.1129.1_Portable": {
+        "dirs": [],
+        "files": [
+            "Notepad3_5.21.1129.1_x64_Portable.zip",
+            "Notepad3_5.21.1129.1_x86_Portable.zip"
+        ]
+    },
+    "A:\\01_软件环境\\01_工具\\文档工具\\pandoc_linux": {
+        "dirs": [],
+        "files": [
+            "pandoc-2.19.2-1-amd64.deb",
+            "pandoc-2.19.2-linux-amd64.tar.gz"
+        ]
+    },
+    "A:\\01_软件环境\\01_工具\\格式转换": {
+        "dirs": [],
+        "files": [
+            "FormatFactory_v5.4.5_绿色免安装.exe",
+            "G格式工厂.7z",
+            "G格式工厂_setup.exe",
+            "G格式转换工具-小丸工具箱R236.exe",
+            "Y右键文件转换FileConverter-1.2.3-x64-setup.msi"
+        ]
+    },
+    "A:\\01_软件环境\\01_工具\\流程图": {
+        "dirs": [],
+        "files": [
+            "draw.io-20.3.0.msi",
+            "DrawioProtable.zip",
+            "edraw-max_cn_full5374.exe",
+            "S思维导图_mindmaster.exe",
+            "S思维导图_XMind ZEN 2020 (64bit).rar"
+        ]
+    },
+    "A:\\01_软件环境\\01_工具\\浏览器": {
+        "dirs": [],
+        "files": [
+            "ChromeSetup.exe",
+            "Firefox-latest.exe",
+            "Firefox便携版_98.0.0_tete009_64bit_Portable.7z",
+            "F蜂蜜浏览器_HONEYVIEW-SETUP-V5.35.exe",
+            "Google_Chrome便携版_100.0.4896.60_64bit_Portable.7z",
+            "Microsoft_Edge_便携版100.0.1185.29_64bit_Portable.7z",
+            "X星愿浏览器.exe"
+        ]
+    },
+    "A:\\01_软件环境\\01_工具\\激活工具": {
+        "dirs": [
+            "MicroKMS神龙版",
+            "Windows10数字权力激活",
+            "三星win7激活工具",
+            "其他win7激活工具",
+            "通用win7激活"
+        ],
+        "files": [
+            "HEU_KMS_Activator_24.6.0.rar",
+            "HEU_KMS_Activator_26.2.1_Single.exe",
+            "HEU_KMS_Activator_v26.2.1.zip",
+            "W10_Digital_Activation_1.4.5.3_Single.exe",
+            "准虚拟化激活码生成器.exe",
+            "激活工具.rar"
+        ]
+    },
+    "A:\\01_软件环境\\01_工具\\激活工具\\MicroKMS神龙版": {
+        "dirs": [],
+        "files": [
+            "MicroKMS_v20.09.12_N.exe",
+            "MicroKMS神龙版.rar",
+            "解压密码.txt"
+        ]
+    },
+    "A:\\01_软件环境\\01_工具\\激活工具\\Windows10数字权力激活": {
+        "dirs": [],
+        "files": [
+            "Windows 10 数字永久激活工具 v1.3.4.zip",
+            "解压密码.txt"
+        ]
+    },
+    "A:\\01_软件环境\\01_工具\\激活工具\\三星win7激活工具": {
+        "dirs": [],
+        "files": [
+            "三星笔记本win7激活工具.zip",
+            "解压密码.txt"
+        ]
+    },
+    "A:\\01_软件环境\\01_工具\\激活工具\\其他win7激活工具": {
+        "dirs": [],
+        "files": [
+            "激活工具.zip",
+            "解压密码.txt"
+        ]
+    },
+    "A:\\01_软件环境\\01_工具\\激活工具\\通用win7激活": {
+        "dirs": [],
+        "files": [
+            "oem7.zip",
+            "解压密码及使用方法.txt"
+        ]
+    },
+    "A:\\01_软件环境\\01_工具\\火绒安全": {
+        "dirs": [],
+        "files": [
+            "火绒完整版_v5.0.69.exe",
+            "火绒弹窗拦截.zip"
+        ]
+    },
+    "A:\\01_软件环境\\01_工具\\硬盘工具": {
+        "dirs": [],
+        "files": [
+            "CrystalDiskInfo.7z",
+            "CrystalDiskMark.7z",
+            "HDTune.exe"
+        ]
+    },
+    "A:\\01_软件环境\\01_工具\\系统工具": {
+        "dirs": [
+            "状态栏工具"
+        ],
+        "files": [
+            "A傲梅分区.zip",
+            "A傲梅分区助手.rar",
+            "DiskGenius Professional 5.1.2.766 + Crack.zip",
+            "DiskGenius_pro2022_en.rar",
+            "DiskGenius_Pro_v5.4.3.1342_x86_x64.rar",
+            "Dism++_10.1.1002.1_Portable.zip",
+            "F分区助手.exe",
+            "G关闭Win10自动更新.exe",
+            "Sandboxie-Plus-x64-v1.5.3.exe",
+            "WiseCare365.zip",
+            "W微软常用运行库合集 64位_2017.03.11.exe",
+            "W微软常用运行库合集a.exe",
+            "W微软运行库MSVBCRT.AIO.2022.04.09.exe",
+            "Z注册表编辑器RegCool_v1.320_Single.exe",
+            "软媒工具箱.7z",
+            "软媒工具箱.zip"
+        ]
+    },
+    "A:\\01_软件环境\\01_工具\\系统工具\\状态栏工具": {
+        "dirs": [
+            "TrafficMonitorPlugins"
+        ],
+        "files": [
+            "TrafficMonitor_V1.84.1_x64.zip"
+        ]
+    },
+    "A:\\01_软件环境\\01_工具\\系统工具\\状态栏工具\\TrafficMonitorPlugins": {
+        "dirs": [],
+        "files": [
+            "PomodoroTimer-v1.4-x64.zip",
+            "WeatherPro-v0.8-x64.zip"
+        ]
+    },
+    "A:\\01_软件环境\\01_工具\\脚本": {
+        "dirs": [],
+        "files": [
+            "FirstEnRename.py",
+            "Important.txt",
+            "Tampermonkey_4_9_0_0.crx",
+            "U盘文件恢复.bat",
+            "打开本地组策划编辑器.cmd",
+            "显示隐藏文件.cmd",
+            "显示隐藏文件.txt"
+        ]
+    },
+    "A:\\01_软件环境\\01_工具\\视频工具": {
+        "dirs": [],
+        "files": [
+            "PotPlayer32_220420.zip",
+            "PotPlayerPortable-220706.zip",
+            "PotPlayerPortable64-220706.zip",
+            "PotPlayerSetup32_220706.exe",
+            "PotPlayerSetup64_220706.exe",
+            "S视频剪辑_camtasia.7z",
+            "vlc-3.0.17.4-win64.exe"
+        ]
+    },
+    "A:\\01_软件环境\\01_工具\\辅助工具": {
+        "dirs": [
+            "手机作为扬声器",
+            "鼠标键盘穿透"
+        ],
+        "files": [
+            "BitDockSetup1.9.9.1320安装版.exe",
+            "codegen-v1.5.8-windows-x64.zip",
+            "codegen-v1.6.521-windows-x64.zip",
+            "MouseInc.exe",
+            "MouseInc.json",
+            "Quicker.x64.1.33.27.0.msi",
+            "RocketDock-v1.3.5.exe",
+            "R瑞士军刀uTools-2.4.3.exe",
+            "TrafficMonitor_V1.80.1_x64状态栏信息显示.zip",
+            "uTools-2.6.3.exe"
+        ]
+    },
+    "A:\\01_软件环境\\01_工具\\辅助工具\\手机作为扬声器": {
+        "dirs": [],
+        "files": [
+            "soundwire-server-2-5.exe",
+            "SoundWireFree-2.4.apk",
+            "SoundWire_Server_setup7-8-10.zip"
+        ]
+    },
+    "A:\\01_软件环境\\01_工具\\辅助工具\\鼠标键盘穿透": {
+        "dirs": [],
+        "files": [
+            "synergy.reg",
+            "synergyzeb5666.zip",
+            "Synergy_0145666.exe",
+            "synergy_1.8.4.msi",
+            "Synergy_沐棋的博客-CSDN博客_synergy.mhtml"
+        ]
+    },
+    "A:\\01_软件环境\\01_工具\\远程控制": {
+        "dirs": [
+            "01_向日葵",
+            "Todesk",
+            "VNC"
+        ],
+        "files": []
+    },
+    "A:\\01_软件环境\\01_工具\\远程控制\\01_向日葵": {
+        "dirs": [],
+        "files": [
+            "01_32_sunlogin_client_lite_1.0.1.43315.exe",
+            "01_64_sunlogin_client_lite_1.0.1.43315_x64.exe",
+            "01_向日葵_SunloginClient_12.0.1.39931_x64.exe",
+            "ToDesk_Lite_x64.exe",
+            "打开, 本机识别码发我.exe"
+        ]
+    },
+    "A:\\01_软件环境\\01_工具\\远程控制\\Todesk": {
+        "dirs": [],
+        "files": [
+            "ToDesk_Lite.exe",
+            "ToDesk_Lite_x64.exe",
+            "ToDesk_Setup.exe"
+        ]
+    },
+    "A:\\01_软件环境\\01_工具\\远程控制\\VNC": {
+        "dirs": [
+            "server",
+            "viewer"
+        ],
+        "files": []
+    },
+    "A:\\01_软件环境\\01_工具\\远程控制\\VNC\\server": {
+        "dirs": [],
+        "files": [
+            "VNC-Server-6.7.4-Linux-x86.deb",
+            "VNC-Server-6.7.4-Windows.exe"
+        ]
+    },
+    "A:\\01_软件环境\\01_工具\\远程控制\\VNC\\viewer": {
+        "dirs": [],
+        "files": [
+            "VNC-Viewer-6.21.406-Linux-x86.deb",
+            "VNC-Viewer-6.21.406-Windows.exe"
+        ]
+    },
+    "A:\\01_软件环境\\01_工具\\键鼠工具": {
+        "dirs": [
+            "鼠标穿透"
+        ],
+        "files": [
+            "02_右键工具.exe",
+            "J解除文件限制lockhuntersetup_3-4-3.exe",
+            "lghub_installer.exe",
+            "OpenArk_1.2.2_快捷键检测.zip",
+            "Y右键菜单神器Easy Context Menu1.6绿色汉化版.rar",
+            "右键菜单编辑器.exe"
+        ]
+    },
+    "A:\\01_软件环境\\01_工具\\键鼠工具\\鼠标穿透": {
+        "dirs": [],
+        "files": [
+            "synergy.reg",
+            "synergyzeb5666.zip",
+            "Synergy_0145666.exe",
+            "synergy_1.8.4.msi",
+            "synergy_1.8.4.zip"
+        ]
+    },
+    "A:\\01_软件环境\\01_工具\\阿里云盘": {
+        "dirs": [],
+        "files": [
+            "A阿里云盘变本地硬盘64位-1.1.61.exe",
+            "A阿里小白羊版Win v2.12.14.7z",
+            "v2.12.14通用升级补丁.zip"
+        ]
+    },
+    "A:\\01_软件环境\\01_工具\\驱动工具": {
+        "dirs": [],
+        "files": [
+            "L罗技驱动.rar",
+            "Q驱动管理IObit_Driver_Booster_9.2.0.178_Portable.7z",
+            "Q驱动精灵_v9.61.3708.3054_纯净版绿色单文件.exe",
+            "RK_Keyboard_驱动_Setup_V1.0_0522.exe"
+        ]
+    },
+    "A:\\01_软件环境\\02_环境": {
+        "dirs": [
+            "C",
+            "Go",
+            "Java",
+            "JetBrains 2021",
+            "Linux",
+            "Matlab",
+            "MySQL",
+            "Nao机器人",
+            "Nodejs",
+            "Python",
+            "Redis",
+            "工具",
+            "破解补丁",
+            "编辑器"
+        ],
+        "files": []
+    },
+    "A:\\01_软件环境\\02_环境\\C": {
+        "dirs": [
+            "Dev-C++"
+        ],
+        "files": [
+            ".vscode.zip",
+            "Dev-Cpp_best_package.7z",
+            "mingw-17.1-without-git.exe",
+            "mingw64.7z",
+            "小熊猫.C  .2.4.win64.MinGW-w64 X86_64 GCC 11.2.Setup.exe"
+        ]
+    },
+    "A:\\01_软件环境\\02_环境\\C\\Dev-C++": {
+        "dirs": [],
+        "files": [
+            "best_Dev-Cpp.6.7.5.MinGW-w64.X86_64.GCC.10.3.Setup.exe",
+            "Dev-Cpp 5.11 TDM-GCC 4.9.2 Setup.exe",
+            "Dev-Cpp 5.7.1 MinGW 4.8.1 Setup.exe",
+            "Dev-Cpp.6.7.5.GCC.9.2.Portable.7z",
+            "Dev-Cpp.6.7.5.MinGW-w64.X86_64.GCC.10.3.Portable.7z",
+            "Dev-Cpp高级绿色版.7z",
+            "leoupdate.syntax",
+            "newleo.syntax",
+            "Snipaste_2021-10-17_15-39-09.png",
+            "小熊猫.C  .2.5.win32.MinGW-w64 i686 GCC 8.1.Setup.exe"
+        ]
+    },
+    "A:\\01_软件环境\\02_环境\\Go": {
+        "dirs": [],
+        "files": [
+            "go1.18.windows-amd64.zip",
+            "go1.19.windows-amd64.msi",
+            "tools-master.zip"
+        ]
+    },
+    "A:\\01_软件环境\\02_环境\\Java": {
+        "dirs": [
+            "01_破解补丁",
+            "02_JDK",
+            "03_IDEA",
+            "JAVA反编译工具",
+            "Maven"
+        ],
+        "files": [
+            "apache-tomcat-8.5.68-windows-x64.zip",
+            "Java配置.txt"
+        ]
+    },
+    "A:\\01_软件环境\\02_环境\\Java\\01_破解补丁": {
+        "dirs": [
+            "5000法"
+        ],
+        "files": [
+            "ide-eval-resetter-2.1.13.jar",
+            "ide-eval-resetter-2.1.6.zip",
+            "resetter说明.txt",
+            "服务器破解法.txt"
+        ]
+    },
+    "A:\\01_软件环境\\02_环境\\Java\\01_破解补丁\\5000法": {
+        "dirs": [
+            "ja-netfilter"
+        ],
+        "files": [
+            "JetBrains2021安装教程.mhtml"
+        ]
+    },
+    "A:\\01_软件环境\\02_环境\\Java\\01_破解补丁\\5000法\\ja-netfilter": {
+        "dirs": [
+            "plugins"
+        ],
+        "files": [
+            "ja-netfilter.jar",
+            "janf_config.txt",
+            "README.pdf",
+            "sha1sum.txt"
+        ]
+    },
+    "A:\\01_软件环境\\02_环境\\Java\\01_破解补丁\\5000法\\ja-netfilter\\plugins": {
+        "dirs": [],
+        "files": [
+            "dns.jar",
+            "hideme.jar",
+            "mymap-v1.0.1.jar",
+            "url.jar"
+        ]
+    },
+    "A:\\01_软件环境\\02_环境\\Java\\02_JDK": {
+        "dirs": [],
+        "files": [
+            "01_jdk-8u20-windows-x64.exe",
+            "02_jdk-11.0.2_windows-x64_bin.exe",
+            "02_JDK.7z",
+            "Java配置.txt",
+            "JDK_8.0.1310.11_32bit.exe",
+            "jre-8u60-windows-x64.exe",
+            "openjdk-17+35_windows-x64_bin.zip",
+            "openjdk-19.0.1_windows-x64_bin.zip",
+            "openjdk-8u42-b03-windows-i586-14_jul_2022.zip"
+        ]
+    },
+    "A:\\01_软件环境\\02_环境\\Java\\03_IDEA": {
+        "dirs": [],
+        "files": [
+            "eclipse-jee-neon-1a-win_64.zip",
+            "ideaIC-2020.3.2.exe",
+            "ideaIC-2021.1.exe",
+            "ideaIU-2020.3.1.exe",
+            "ideaIU-2021.2.4.exe",
+            "区别.png"
+        ]
+    },
+    "A:\\01_软件环境\\02_环境\\Java\\JAVA反编译工具": {
+        "dirs": [],
+        "files": [
+            "FrontEndPlus.zip",
+            "jad1.5.8g.win.zip"
+        ]
+    },
+    "A:\\01_软件环境\\02_环境\\Java\\Maven": {
+        "dirs": [
+            "1. Maven安装包",
+            "2. Maven本地仓库",
+            "3. 测试web项目"
+        ],
+        "files": []
+    },
+    "A:\\01_软件环境\\02_环境\\Java\\Maven\\1. Maven安装包": {
+        "dirs": [],
+        "files": [
+            "apache-maven-3.6.1-bin.zip"
+        ]
+    },
+    "A:\\01_软件环境\\02_环境\\Java\\Maven\\2. Maven本地仓库": {
+        "dirs": [],
+        "files": [
+            "mvn_resp.rar"
+        ]
+    },
+    "A:\\01_软件环境\\02_环境\\Java\\Maven\\3. 测试web项目": {
+        "dirs": [],
+        "files": [
+            "web-demo.zip"
+        ]
+    },
+    "A:\\01_软件环境\\02_环境\\JetBrains 2021": {
+        "dirs": [
+            "Crack"
+        ],
+        "files": [
+            "datagrip-2022.1.4.exe",
+            "goland-2021.3.2.exe",
+            "ideaIU-2021.3.1.exe",
+            "jetbrains-toolbox-1.24.12080.exe",
+            "JetBrains.Rider-2021.3.2.exe",
+            "JetBrains2021安装教程.mhtml",
+            "PhpStorm-2021.3.1.exe",
+            "pycharm-professional-2021.3.1.exe",
+            "WebStorm-2021.3.1.exe"
+        ]
+    },
+    "A:\\01_软件环境\\02_环境\\JetBrains 2021\\Crack": {
+        "dirs": [
+            "ja-netfilter"
+        ],
+        "files": []
+    },
+    "A:\\01_软件环境\\02_环境\\JetBrains 2021\\Crack\\ja-netfilter": {
+        "dirs": [
+            "plugins"
+        ],
+        "files": [
+            "ja-netfilter.jar",
+            "janf_config.txt",
+            "README.pdf",
+            "sha1sum.txt"
+        ]
+    },
+    "A:\\01_软件环境\\02_环境\\JetBrains 2021\\Crack\\ja-netfilter\\plugins": {
+        "dirs": [],
+        "files": [
+            "dns.jar",
+            "hideme.jar",
+            "mymap-v1.0.1.jar",
+            "url.jar"
+        ]
+    },
+    "A:\\01_软件环境\\02_环境\\Linux": {
+        "dirs": [
+            "pycharm",
+            "python",
+            "虚拟机"
+        ],
+        "files": [
+            "FileZilla_Pro_3.60.2_64bit_Green.zip",
+            "MobaXterm_CHS.rar",
+            "Snipaste_2021-03-30_20-07-21.png",
+            "Xftp-7.0.0063p.exe",
+            "Xftp_5.0.1028.exe",
+            "Xftp_6.0.0.191_Protable.zip",
+            "Xshell-7.0.0065p.exe",
+            "Xshell_5.0.0.37_setup.1459931786.exe"
+        ]
+    },
+    "A:\\01_软件环境\\02_环境\\Linux\\pycharm": {
+        "dirs": [
+            "破解补丁"
+        ],
+        "files": [
+            "pycharm-community-2021.1.1.tar.gz",
+            "pycharm-professional-2020.3.4.tar.gz",
+            "环境变量.txt"
+        ]
+    },
+    "A:\\01_软件环境\\02_环境\\Linux\\pycharm\\破解补丁": {
+        "dirs": [
+            "01_JetBrains 2021.x更新4月10日全家桶，激活",
+            "Jetbrains2020.3及以上版本激活补丁",
+            "old"
+        ],
+        "files": [
+            "01_ide-eval-resetter-2.1.13.jar",
+            "idea_补丁破解.zip",
+            "linux下.txt"
+        ]
+    },
+    "A:\\01_软件环境\\02_环境\\Linux\\pycharm\\破解补丁\\01_JetBrains 2021.x更新4月10日全家桶，激活": {
+        "dirs": [
+            "!01方式一：【推荐】IDEA 暴力无限重置30天试用期补丁",
+            "【【程序员，必看，福利】】",
+            "方式二：【不推荐】激活到2099年补丁，需修改hosts"
+        ],
+        "files": []
+    },
+    "A:\\01_软件环境\\02_环境\\Linux\\pycharm\\破解补丁\\01_JetBrains 2021.x更新4月10日全家桶，激活\\!01方式一：【推荐】IDEA 暴力无限重置30天试用期补丁": {
+        "dirs": [],
+        "files": [
+            "ide-eval-resetter-2.1.6.zip",
+            "使用必看.txt"
+        ]
+    },
+    "A:\\01_软件环境\\02_环境\\Linux\\pycharm\\破解补丁\\01_JetBrains 2021.x更新4月10日全家桶，激活\\【【程序员，必看，福利】】": {
+        "dirs": [],
+        "files": [
+            "1000多本，技术书籍电子书，这里看.txt",
+            "高清PDF：7701页《第3版：互联网大厂面试题》.pdf"
+        ]
+    },
+    "A:\\01_软件环境\\02_环境\\Linux\\pycharm\\破解补丁\\01_JetBrains 2021.x更新4月10日全家桶，激活\\方式二：【不推荐】激活到2099年补丁，需修改hosts": {
+        "dirs": [
+            "reset_script"
+        ],
+        "files": [
+            "BetterIntelliJ.zip",
+            "使用前必读.txt",
+            "激活补丁key.txt"
+        ]
+    },
+    "A:\\01_软件环境\\02_环境\\Linux\\pycharm\\破解补丁\\01_JetBrains 2021.x更新4月10日全家桶，激活\\方式二：【不推荐】激活到2099年补丁，需修改hosts\\reset_script": {
+        "dirs": [],
+        "files": [
+            "reset_jetbrains_eval_mac_linux.sh",
+            "reset_jetbrains_eval_windows.vbs"
+        ]
+    },
+    "A:\\01_软件环境\\02_环境\\Linux\\pycharm\\破解补丁\\Jetbrains2020.3及以上版本激活补丁": {
+        "dirs": [
+            "reset_script"
+        ],
+        "files": [
+            "ActivationCode.txt",
+            "JetbrainsPatch_20210101.zip",
+            "激活教程.txt"
+        ]
+    },
+    "A:\\01_软件环境\\02_环境\\Linux\\pycharm\\破解补丁\\Jetbrains2020.3及以上版本激活补丁\\reset_script": {
+        "dirs": [],
+        "files": [
+            "reset_jetbrains_eval_mac_linux.sh",
+            "reset_jetbrains_eval_windows.vbs"
+        ]
+    },
+    "A:\\01_软件环境\\02_环境\\Linux\\pycharm\\破解补丁\\old": {
+        "dirs": [],
+        "files": [
+            "ActivationCode.txt",
+            "JetbrainsPatch_20210101.zip",
+            "激活教程.txt"
+        ]
+    },
+    "A:\\01_软件环境\\02_环境\\Linux\\python": {
+        "dirs": [],
+        "files": [
+            "Python-2.7.18.tar.xz",
+            "Python-2.7.18.tgz"
+        ]
+    },
+    "A:\\01_软件环境\\02_环境\\Linux\\虚拟机": {
+        "dirs": [],
+        "files": [
+            "ssh.png",
+            "VirtualBox-6.1.12-139181-Win.exe",
+            "VMware Workstation Pro 15.5.0.rar",
+            "VMware16.1.1.7z"
+        ]
+    },
+    "A:\\01_软件环境\\02_环境\\Matlab": {
+        "dirs": [],
+        "files": [
+            "matlab.rar",
+            "Matlab安装指导(1).pdf",
+            "Uninstall tool.exe"
+        ]
+    },
+    "A:\\01_软件环境\\02_环境\\MySQL": {
+        "dirs": [
+            "2-驱动",
+            "mysql可视化工具SQLyog"
+        ],
+        "files": [
+            "mysql-5.5.54-winx64.msi",
+            "mysql-5.5.62-winx64.msi",
+            "mysql-8.0.25-winx64.zip",
+            "mysql-installer-community-5.7.34.0.msi",
+            "mysql-installer-community-8.0.26.0.msi",
+            "Navicat Premium v11.7z",
+            "SQL Server 2019(64bit).rar",
+            "SQLyog-10.0.0-0[客户端].zip"
+        ]
+    },
+    "A:\\01_软件环境\\02_环境\\MySQL\\2-驱动": {
+        "dirs": [
+            "01-MySQL驱动",
+            "02-ResultSetMetaData配置对象的属性",
+            "04-dbutils",
+            "self"
+        ],
+        "files": [
+            "03-数据库连接池驱动.7z"
+        ]
+    },
+    "A:\\01_软件环境\\02_环境\\MySQL\\2-驱动\\01-MySQL驱动": {
+        "dirs": [],
+        "files": [
+            "mysql-connector-java-5.1.37-bin.jar"
+        ]
+    },
+    "A:\\01_软件环境\\02_环境\\MySQL\\2-驱动\\02-ResultSetMetaData配置对象的属性": {
+        "dirs": [],
+        "files": [
+            "commons-beanutils-1.8.0.jar",
+            "commons-logging-1.1.1.jar"
+        ]
+    },
+    "A:\\01_软件环境\\02_环境\\MySQL\\2-驱动\\04-dbutils": {
+        "dirs": [],
+        "files": [
+            "commons-dbutils-1.3-bin.zip",
+            "commons-dbutils-1.3-src.zip",
+            "commons-dbutils-1.6.jar"
+        ]
+    },
+    "A:\\01_软件环境\\02_环境\\MySQL\\2-驱动\\self": {
+        "dirs": [],
+        "files": [
+            "commons-dbutils-1.7-bin.zip",
+            "commons-io-2.9.0-bin.zip",
+            "mysql-connector-java-5.1.45.zip",
+            "mysql-connector-java-5.1.8.zip",
+            "mysql-connector-java-8.0.24.zip"
+        ]
+    },
+    "A:\\01_软件环境\\02_环境\\MySQL\\mysql可视化工具SQLyog": {
+        "dirs": [
+            "SQLyog-11.2.5-0.x64"
+        ],
+        "files": [
+            "SQLyog-13.1.7-0.x64Community.zip"
+        ]
+    },
+    "A:\\01_软件环境\\02_环境\\MySQL\\mysql可视化工具SQLyog\\SQLyog-11.2.5-0.x64": {
+        "dirs": [],
+        "files": [
+            "SQLyog-11.2.5-0.x64.exe",
+            "SQLyog-11.2.5-0.x64.reg"
+        ]
+    },
+    "A:\\01_软件环境\\02_环境\\Nao机器人": {
+        "dirs": [
+            "nao"
+        ],
+        "files": [
+            "add.pth",
+            "choregraphe-suite-2.8.6.23-win64-vs2015-setup.exe",
+            "nao库安装.txt",
+            "pynaoqi-python2.7-2.8.6.23-win64-vs2015-20191127_152649.zip",
+            "robot-settings-2.8.6.23-win64-vs2015-setup.exe"
+        ]
+    },
+    "A:\\01_软件环境\\02_环境\\Nao机器人\\nao": {
+        "dirs": [
+            "nao6",
+            "sublime text 插件"
+        ],
+        "files": [
+            "opencv-2.4.9.exe",
+            "pynaoqi-python2.7-2.8.5.10-win64-vs2015-20181203_210310.zip",
+            "sublimetext3.zip"
+        ]
+    },
+    "A:\\01_软件环境\\02_环境\\Nao机器人\\nao\\nao6": {
+        "dirs": [
+            "V6 Demo"
+        ],
+        "files": [
+            "aldeb-doc-2.8.3.54.zip",
+            "choregraphe-suite-2.8.3.54-win32-vs2013-setup.exe",
+            "NAO V6 datasheet.pdf",
+            "nao-flasher-1.12.5-win32.zip",
+            "NAO说明书.pdf",
+            "PUTTY.EXE",
+            "SoftBank Robotics Europe_NAO V6 Introduction_China.pdf",
+            "winscp_V5.7.4.5553_setup.1436424350.exe",
+            "使用U盘对机器人进行恢复出厂.docx",
+            "最新培训手册.pptx"
+        ]
+    },
+    "A:\\01_软件环境\\02_环境\\Nao机器人\\nao\\nao6\\V6 Demo": {
+        "dirs": [],
+        "files": [
+            "exploration-demonstration-015.pkg",
+            "go-to-rest-28-012.pkg",
+            "guess-sport-se-2114.pkg",
+            "happy-birthday-116.pkg",
+            "head-shoulders-knees-toes-217.pkg",
+            "how-is-the-weather-2113.pkg",
+            "misterfunk-0111.pkg",
+            "nao_presentation-218.pkg",
+            "pkg 直接安装截图.jpg",
+            "puppet-demonstration-017.pkg",
+            "soccer-demonstration-28-013.pkg",
+            "taichidance-018.pkg",
+            "three-musketeers-story-286.pkg",
+            "vangelisdance-28-226.pkg",
+            "walk-together-demonstration-014.pkg",
+            "触发词清单.xlsx"
+        ]
+    },
+    "A:\\01_软件环境\\02_环境\\Nao机器人\\nao\\sublime text 插件": {
+        "dirs": [],
+        "files": [
+            "Chinese-Localization-master.zip",
+            "SideBarEnhancements-st3.zip",
+            "SublimeCodeIntel-master.zip",
+            "SublimeREPL-master.zip",
+            "快捷键.txt"
+        ]
+    },
+    "A:\\01_软件环境\\02_环境\\Nodejs": {
+        "dirs": [],
+        "files": [
+            "node-v16.16.0-x64.msi"
+        ]
+    },
+    "A:\\01_软件环境\\02_环境\\Python": {
+        "dirs": [
+            "Anaconda",
+            "clearIDLE",
+            "Pycharm",
+            "python2",
+            "python3"
+        ],
+        "files": []
+    },
+    "A:\\01_软件环境\\02_环境\\Python\\Anaconda": {
+        "dirs": [],
+        "files": [
+            "Anaconda2-2019.10-Windows-x86_64.exe",
+            "Anaconda3-2020.11-Linux-x86_64.sh",
+            "Anaconda3-2020.11-Windows-x86_64(1).exe",
+            "Anaconda3-2022.05-Windows-x86_64.exe"
+        ]
+    },
+    "A:\\01_软件环境\\02_环境\\Python\\clearIDLE": {
+        "dirs": [],
+        "files": [
+            "ClearWindow.py"
+        ]
+    },
+    "A:\\01_软件环境\\02_环境\\Python\\Pycharm": {
+        "dirs": [
+            "01_破解补丁"
+        ],
+        "files": [
+            "pycharm_2021.1.exe",
+            "pycharm_2021.3.3.exe",
+            "pycharm_2022.1_Protable.7z",
+            "pycharm_pro_2020.3.3.exe",
+            "pycharm_pro_2021.1.1.exe",
+            "pycharm_pro_2021.2.4.exe",
+            "pycharm_pro_2021.3.1.exe",
+            "区别.png"
+        ]
+    },
+    "A:\\01_软件环境\\02_环境\\Python\\Pycharm\\01_破解补丁": {
+        "dirs": [
+            "5000法"
+        ],
+        "files": [
+            "ide-eval-resetter-2.1.13.jar",
+            "ide-eval-resetter-2.1.6.zip",
+            "resetter说明.txt",
+            "服务器破解法.txt"
+        ]
+    },
+    "A:\\01_软件环境\\02_环境\\Python\\Pycharm\\01_破解补丁\\5000法": {
+        "dirs": [
+            "ja-netfilter"
+        ],
+        "files": [
+            "JetBrains2021安装教程.mhtml"
+        ]
+    },
+    "A:\\01_软件环境\\02_环境\\Python\\Pycharm\\01_破解补丁\\5000法\\ja-netfilter": {
+        "dirs": [
+            "plugins"
+        ],
+        "files": [
+            "ja-netfilter.jar",
+            "janf_config.txt",
+            "README.pdf",
+            "sha1sum.txt"
+        ]
+    },
+    "A:\\01_软件环境\\02_环境\\Python\\Pycharm\\01_破解补丁\\5000法\\ja-netfilter\\plugins": {
+        "dirs": [],
+        "files": [
+            "dns.jar",
+            "hideme.jar",
+            "mymap-v1.0.1.jar",
+            "url.jar"
+        ]
+    },
+    "A:\\01_软件环境\\02_环境\\Python\\python2": {
+        "dirs": [],
+        "files": [
+            "python-2.7.16.amd64.msi",
+            "python-2.7.17.msi",
+            "python-2.7.18.amd64.msi"
+        ]
+    },
+    "A:\\01_软件环境\\02_环境\\Python\\python3": {
+        "dirs": [],
+        "files": [
+            "python-3.11.1-amd64.exe",
+            "python-3.7.9-amd64.exe",
+            "python-3.9.9-amd64.exe"
+        ]
+    },
+    "A:\\01_软件环境\\02_环境\\Redis": {
+        "dirs": [],
+        "files": [
+            "Redis-x64-5.0.14.1.zip",
+            "RedisInsight-v2-win-installer.exe"
+        ]
+    },
+    "A:\\01_软件环境\\02_环境\\工具": {
+        "dirs": [],
+        "files": [
+            "Git-2.37.1-64-bit.exe",
+            "KiteSetup_1.2021.310.0.exe"
+        ]
+    },
+    "A:\\01_软件环境\\02_环境\\破解补丁": {
+        "dirs": [
+            "5000法"
+        ],
+        "files": [
+            "5000法.zip",
+            "ide-eval-resetter-2.1.13.jar",
+            "ide-eval-resetter-2.1.6.zip",
+            "resetter说明.txt",
+            "服务器破解法.txt"
+        ]
+    },
+    "A:\\01_软件环境\\02_环境\\破解补丁\\5000法": {
+        "dirs": [
+            "ja-netfilter"
+        ],
+        "files": [
+            "JetBrains2021安装教程.mhtml"
+        ]
+    },
+    "A:\\01_软件环境\\02_环境\\破解补丁\\5000法\\ja-netfilter": {
+        "dirs": [
+            "plugins"
+        ],
+        "files": [
+            "ja-netfilter.jar",
+            "janf_config.txt",
+            "README.pdf",
+            "sha1sum.txt"
+        ]
+    },
+    "A:\\01_软件环境\\02_环境\\破解补丁\\5000法\\ja-netfilter\\plugins": {
+        "dirs": [],
+        "files": [
+            "dns.jar",
+            "hideme.jar",
+            "mymap-v1.0.1.jar",
+            "url.jar"
+        ]
+    },
+    "A:\\01_软件环境\\02_环境\\编辑器": {
+        "dirs": [],
+        "files": [
+            "notepad2.zip",
+            "npp.7.5.4.Installer.x64.exe",
+            "Sublime Text Build3207（64bit).rar",
+            "typora白嫖1.2.4_by 落虾与孤鹜齐飞.zip",
+            "Visual Studio2022(64bit).zip",
+            "VSCodeUserSetup-x64-1.70.0.exe"
+        ]
+    }
+}
