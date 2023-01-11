@@ -59,13 +59,23 @@ class Scanner:
             json.dump(self.data_, f, indent=4, ensure_ascii=False)
             self.logger.info(f"dump data to: {os.path.abspath(self.data_file)}, carry: {len(self.data_)}")
 
-    @timer
-    def search_file(self, name):
-        res_data = []
-        self.logger.debug(f"searching files like: {name}")
+    @timer_ns
+    def _search(self, name, Pattern, dict_attr='files', ignore_case=True):
+        # 搜索文件夹名称
+        res_data = []  # 待返回的数据
+        match_flags = 0  # 正则匹配方式, 初始化为默认值
+        if Pattern:  # 不为空则使用传递的参数
+            _Pattern = Pattern
+        else:  # 使用默认值
+            _Pattern = f".*{name}.*"
+        if ignore_case:
+            # 不匹配大小写
+            match_flags = re.IGNORECASE
+
+        self.logger.debug(f"searching {dict_attr} like: {name}")
         for dir_path, data in self.data_.items():
-            for file_name in data.get('files'):
-                if re.match(f".*{name}.*", file_name, re.IGNORECASE):
+            for file_name in data.get(dict_attr):
+                if re.match(_Pattern, file_name, match_flags):
                     res_data.append({
                         'abs' : os.path.join(dir_path, file_name),
                         'dir' : dir_path,
@@ -75,6 +85,14 @@ class Scanner:
         self.logger.debug(f"{res_data=!s}")
         return res_data
 
-    def search_dir(self, data, name):
-        # todo 搜索文件夹名称
-        ...
+    def search_file(self, name):
+        # 搜索文件, 模糊匹配
+        return self._search(name=name, Pattern=f".*{name}.*", dict_attr='files')
+
+    def search_dir(self, name):
+        # 搜索文件夹, 模糊匹配
+        return self._search(name=name, Pattern=f".*{name}.*", dict_attr='dirs')
+
+    def search_ext(self, ext):
+        # 搜索指定后缀名的文件
+        return self._search(name=f"*.{ext}", Pattern=rf".*\.{ext}", dict_attr='files')

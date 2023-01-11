@@ -19,7 +19,7 @@ def timer(func):
         value = func(*args, **kwargs)
         end_time = time.perf_counter()  # 2
         run_time = end_time - start_time  # 3
-        logger.info(f"Finished {func.__name__!r} in {run_time:.4f} secs")
+        logger.info(f"Finished {func.__name__!r} in {run_time:.4f} secs.")
         return value
 
     return wrapper_timer
@@ -34,7 +34,7 @@ def timer_ns(func):
         value = func(*args, **kwargs)
         end_time = time.perf_counter_ns()  # 2
         run_time = end_time - start_time  # 3
-        logger.info(f"Finished {func.__name__!r} in {run_time:.4f} ns")
+        logger.info(f"Finished {func.__name__!r} in {run_time:.4f} ns, {run_time/1e9:.5f} s.")
         return value
 
     return wrapper_timer
