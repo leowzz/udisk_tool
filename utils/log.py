@@ -8,10 +8,11 @@ import os
 import logging
 import datetime
 from logging import DEBUG
+
 today = datetime.datetime.today()
 
 
-def get_logger(name="logger", log_dir=r'./log', encoding='utf-8', logger_level=logging.INFO):
+def get_logger(name="logger", logger_level=logging.INFO, log_dir=r'./log', encoding='utf-8', ):
     """
     获取日志记录器
     :param name: logger实例名称

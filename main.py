@@ -5,11 +5,12 @@
 # @file main.py
 import os
 
-from utils import *
+from utils.util import exec_
 
 from pprint import pp
 
-from utils.scanner_ import *
+from utils.scanner_ import Scanner
 
-s = Scanner('123')
+s = Scanner()
 s.search_file('java')
+# exec_('er')

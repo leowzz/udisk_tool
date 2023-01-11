@@ -2,13 +2,15 @@
 # -*- coding:utf-8 -*-
 # @author LeoWang
 # @date 2023/1/10
-# @file utils.py
+# @file util.py
 import os
 import json
 import collections
-import logging
 from pprint import pprint, pformat
-from .setting import Setting
+from utils.log import get_logger
+# from utils import setting
+
+logger = get_logger("utils")
 
 
 class ERROR:
@@ -31,6 +33,7 @@ def exec_(path: str):
     :raise FileNotFoundError
     """
     if not os.path.exists(path):
+        logger.error(f"No such file or directory: {path!r}")
         raise FileNotFoundError(f"No such file or directory: {path!r}")
     if os.path.isfile(path):
         return os.popen(path)

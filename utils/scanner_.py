@@ -7,50 +7,57 @@ import os
 import re
 import json
 from collections import defaultdict
-from .setting import Setting
-from .log import get_logger
-from .timer import timer
+from utils.log import get_logger
+from utils.setting import setting_
+from utils.timer import timer, timer_ns
 
 
 class Scanner:
-    def __init__(self, data_file='data.json'):
-        self.data_file = data_file
-        # 获取设置信息对象
-        setting = Setting()
+    def __init__(self):
         # 获取日志记录器
-        self.logger = get_logger("Scanner", logger_level=setting.get_log_level())
-        self.logger.debug(f"{setting=!s}")
+        self.logger = get_logger("Scanner", logger_level=setting_.get_log_level())
+        self.logger.debug(f"got setting: {setting_!s}")
         # 初始化目录数据
         self.data_ = defaultdict(dict)
         # 获取扫描的根路径
-        self.scan_root = setting.get('scan_root')
-        self.scan_dirs = setting.get('scan_dirs')
+        self.scan_root = setting_.get('scan_root')
+        self.scan_dirs = setting_.get('scan_dirs')
         self.logger.debug(f"{self.scan_dirs=}")
         self.logger.debug(f"{self.scan_root=}")
+        # 从设置信息中获取数据文件存储位置
+        self.data_file = setting_.get('data_file')
+
+        # 读取数据文件
         self.load_()
 
     def scan_(self):
+        # 扫描磁盘
         for dir_ in self.scan_dirs:
             for root, dirs, files in os.walk(rf"{self.scan_root}\{dir_}"):
                 self.data_[root]['dirs'] = dirs
                 self.data_[root]['files'] = files
+        self.logger.debug(f"scan data from disk, got: {len(self.data_)}")
+        # 将扫描到的数据保存到文件
         self.dump_()
 
     def load_(self):
-        if os.path.exists(self.data_file):
+        self.logger.debug(f"got data_file path from setting: {os.path.abspath(self.data_file)}")
+        if not os.path.exists(self.data_file):
+            # 数据文件不存在, 重新扫描磁盘, 生成数据文件
             self.scan_()
-            self.logger.error(f"file: {self.data_file} not found")
+            self.logger.warning(f"file: {os.path.abspath(self.data_file)} not found. auto scan")
             self.logger.info(f"data_file not exists, auto scan, got: {len(self.data_)} items")
             return
         with open(self.data_file, 'r', encoding='utf-8') as f:
             self.data_ = json.load(f)
-        self.logger.info(f"load data from: {self.data_file}, got: {len(self.data_)} items")
+        self.logger.info(f"load data from: {os.path.abspath(self.data_file)}, got: {len(self.data_)} items")
 
     def dump_(self):
+        # 将数据保存到文件
         with open(self.data_file, 'w', encoding='utf-8') as f:
             # 将json写入文件, 设置缩进, 不将中文转换为ascii字符
-            json.dump(dirs_data, f, indent=4, ensure_ascii=False)
-            self.logger.info(f"dump data to: {self.data_file}, carry")
+            json.dump(self.data_, f, indent=4, ensure_ascii=False)
+            self.logger.info(f"dump data to: {os.path.abspath(self.data_file)}, carry: {len(self.data_)}")
 
     @timer
     def search_file(self, name):
@@ -69,4 +76,5 @@ class Scanner:
         return res_data
 
     def search_dir(self, data, name):
+        # todo 搜索文件夹名称
         ...

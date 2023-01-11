@@ -5,7 +5,8 @@
 # @file setting.py
 import os
 import json
-from .log import get_logger, DEBUG
+from logging import DEBUG
+from utils.log import get_logger
 
 
 class Setting:
@@ -20,6 +21,7 @@ class Setting:
         'scan_root'    : r"A:\01_软件环境",
         'auto_save'    : True,
         "logging_level": 10,
+        'data_file'    : 'data.json',
     }
 
     def __init__(self, setting_path='setting.json'):
@@ -31,17 +33,21 @@ class Setting:
         self.logger.debug(f"{setting_path=}")
         self.setting_path = setting_path
         self.data = self.load_setting()
-        self.logger.debug(f"got setting from file: {self.data=!s}")
+        self.logger.debug(f"got setting from file: {os.path.abspath(self.setting_path)!s}")
 
         if not self.data:
             self.data = self.default_setting
             self.logger.debug(f"no setting data, set to default: {self.data=!s}")
-
+            self.save_setting()
         # setting.json中的设置信息不全, 使用默认参数更新
-        # elif len(self.data) < len(self.default_setting):
-        #     for key, value in self.default_setting.items():
-        #         if key not in self.data:
-        #             self.data[key] = value
+        elif len(self.data) < len(self._default_setting):
+            self.logger.info(f"update setting from default")
+            self.logger.debug(f"got setting from file: {self.data}")
+            for key, value in self._default_setting.items():
+                if key not in self.data:
+                    self.logger.info(f"update setting with: {key} {value}")
+                    self.data[key] = value
+            self.save_setting()
 
         if self.data['from_drive']:
             # 如果设置为从磁盘根路径开始扫描, 则将scan_root设置为盘符
@@ -65,7 +71,7 @@ class Setting:
         """
         将设置信息保存到setting.json文件中
         """
-        print(os.path.abspath(self.setting_path))
+        self.logger.info(f"setting_file path: {os.path.abspath(self.setting_path)}")
         with open(self.setting_path, 'w', encoding='utf-8') as f:
             json.dump(self.data, f, indent=4, ensure_ascii=False)
 
@@ -101,3 +107,8 @@ class Setting:
         if setting_level:
             log_level = setting_level
         return log_level
+
+
+# 获取设置信息对象
+setting_ = Setting()
+setting_.logger.info(f'use global setting: {setting_}')

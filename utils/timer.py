@@ -5,6 +5,9 @@
 # @file timer.py
 import time
 import functools
+from utils.setting import setting_
+from utils.log import get_logger
+logger = get_logger("timer", setting_.get_log_level())
 
 
 def timer(func):
@@ -16,7 +19,7 @@ def timer(func):
         value = func(*args, **kwargs)
         end_time = time.perf_counter()  # 2
         run_time = end_time - start_time  # 3
-        print(f"Finished {func.__name__!r} in {run_time:.4f} secs")
+        logger.info(f"Finished {func.__name__!r} in {run_time:.4f} secs")
         return value
 
     return wrapper_timer
@@ -31,7 +34,7 @@ def timer_ns(func):
         value = func(*args, **kwargs)
         end_time = time.perf_counter_ns()  # 2
         run_time = end_time - start_time  # 3
-        print(f"Finished {func.__name__!r} in {run_time:.4f} ns")
+        logger.info(f"Finished {func.__name__!r} in {run_time:.4f} ns")
         return value
 
     return wrapper_timer
