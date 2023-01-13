@@ -95,7 +95,15 @@ class Scanner:
 
     def search_ext(self, ext):
         # 搜索指定后缀名的文件
-        return self._search(name=f"*.{ext}", Pattern=rf".*\.{ext}", dict_attr='files')
+        return self._search(name=f"*.{ext}", Pattern=f".*{ext}$", dict_attr='files')
+
+    def search_with_type(self, name: str, type_=0):
+        type2reg = {
+            0: [f".*{name}.*", 'files'],  # 类型索引: 正则字符串, 待搜索的数据类型
+            1: [f".*{name}.*", 'dirs'],
+            2: [f".*{ext}$", 'files'],
+        }
+        return self._search(name, *type2reg.get(type_))
 
 
 scanner__ = Scanner()
