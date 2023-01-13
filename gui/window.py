@@ -4,8 +4,9 @@
 # @date 2023/1/11
 # @file window.py
 from PyQt5.QtWidgets import (
-    QApplication, QMainWindow, QPushButton, QPlainTextEdit, QMessageBox, QMenu
+    QApplication, QMainWindow, QPushButton, QPlainTextEdit, QMessageBox, QMenu,
 )
+from PyQt5.Qt import QTableWidgetItem, QAbstractItemView
 from gui.ui_mainWindow import Ui_MainWindow
 from PyQt5.QtCore import Qt as CoreQt
 import sys
@@ -32,38 +33,75 @@ class MainWindow(QMainWindow):
         self.logger.info(f"finish init MainWindow.")
         self.logger.debug(f"{self._setting}")
         self.logger.debug(f"{self._scanner}")
-
+        # 初始化搜索到的数据为空
+        self.table_data = []
         # 生成测试数据
         self.test()
+        self.draw_table()
         # 连接信号与槽
         self.connect_to_slot()
 
     def test(self):
-        self.ui.tableWidget.setRowCount(3)
-        # item = self.ui.tableWidget.verticalHeaderItem(0)
-        # item.setText(_translate("MainWindow", "新建行"))
-        from PyQt5.Qt import QTableWidgetItem, QAbstractItemView
-        # 设置表格内容不可编辑
-        self.ui.tableWidget.setEditTriggers(QAbstractItemView.NoEditTriggers)
-        self.ui.tableWidget.setItem(0, 0, QTableWidgetItem('右键菜单编辑器.exe', ))
-        self.ui.tableWidget.setItem(0, 1, QTableWidgetItem("J:01_工具\\键鼠工具\\"))
-        self.ui.tableWidget.setItem(1, 0, QTableWidgetItem('右键菜单编辑器右键菜单编辑器.exe', ))
+        self.table_data = [{
+            'abs': 'A:\\01_软件环境\\01_工具\\格式转换\\Y右键文件转换FileConverter-1.2.3-x64-setup.msi',
+            'dir': 'A:\\01_软件环境\\01_工具\\格式转换', 'name': 'Y右键文件转换FileConverter-1.2.3-x64-setup.msi'
+        }, {
+            'abs' : 'A:\\01_软件环境\\01_工具\\键鼠工具\\02_右键工具.exe', 'dir': 'A:\\01_软件环境\\01_工具\\键鼠工具',
+            'name': '02_右键工具.exe'
+        }, {
+            'abs': 'A:\\01_软件环境\\01_工具\\键鼠工具\\Y右键菜单神器Easy Context Menu1.6绿色汉化版.rar',
+            'dir': 'A:\\01_软件环境\\01_工具\\键鼠工具', 'name': 'Y右键菜单神器Easy Context Menu1.6绿色汉化版.rar'
+        }, {
+            'abs': 'A:\\01_软件环境\\01_工具\\键鼠工具\\右键菜单编辑器.exe',
+            'dir': 'A:\\01_软件环境\\01_工具\\键鼠工具', 'name': '右键菜单编辑器.exe'
+        }]
+        # # 设置行数
+        # self.ui.tableWidget.setRowCount(3)
+        # # 设置表格内容不可编辑
+        # self.ui.tableWidget.setEditTriggers(QAbstractItemView.NoEditTriggers)
+        # self.ui.tableWidget.setItem(0, 0, QTableWidgetItem('右键菜单编辑器.exe', ))
+        # self.ui.tableWidget.setItem(0, 1, QTableWidgetItem("J:01_工具\\键鼠工具\\"))
+        # self.ui.tableWidget.setItem(1, 0, QTableWidgetItem('右键菜单编辑器右键菜单编辑器.exe', ))
 
     def search_click(self):
         # 点击搜索按钮
-        ...
+        search_str = self.ui.lineEdit.text()
+        self.ui.textEdit.setText(search_str)
 
-    # 搜索类型切换
+    def draw_table(self):
+        """
+        渲染表格
+        """
 
-    # 打开选定文件
+        # 设置行数
+        self.ui.tableWidget.setRowCount(len(self.table_data))
+        # 设置表格内容不可编辑
+        self.ui.tableWidget.setEditTriggers(QAbstractItemView.NoEditTriggers)
+        # 逐行渲染表格
+        for index, item in enumerate(self.table_data):
+            self.ui.tableWidget.setItem(
+                index,  # 行索引
+                0,  # 列索引
+                QTableWidgetItem(item.get("name")),  # 表格内容: 文件名
+            )
+            self.ui.tableWidget.setItem(
+                index,  # 行索引
+                1,  # 列索引
+                QTableWidgetItem(item.get("dir")),  # 表格内容: 文件所在路径
+            )
 
-    # 打开选定文件夹
 
-    # 编辑设置
+        # 搜索类型切换
 
-    # 获取当前字体大小
+        # 打开选定文件
 
-    # 更改字体大小
+        # 打开选定文件夹
+
+        # 编辑设置
+
+        # 获取当前字体大小
+
+        # 更改字体大小
 
     def right_click_menu(self, pos):
         print(self, pos)
@@ -121,7 +159,7 @@ class MainWindow(QMainWindow):
         # )
 
         # 点击搜索按钮
-
+        self.ui.pushButton.clicked.connect(self.search_click)
         # 搜索类型切换
 
         # 右键单击

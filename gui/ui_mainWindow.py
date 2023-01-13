@@ -67,8 +67,8 @@ class Ui_MainWindow(object):
         item.setTextAlignment(QtCore.Qt.AlignCenter)
         self.tableWidget.setHorizontalHeaderItem(1, item)
         self.tableWidget.horizontalHeader().setCascadingSectionResizes(True)
-        self.tableWidget.horizontalHeader().setDefaultSectionSize(200)
-        self.tableWidget.horizontalHeader().setMinimumSectionSize(200)
+        self.tableWidget.horizontalHeader().setDefaultSectionSize(320)
+        self.tableWidget.horizontalHeader().setMinimumSectionSize(320)
 
         # self.tableWidget.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)
         # self.tableWidget.horizontalHeader().setSectionResizeMode(QHeaderView.Interactive)
