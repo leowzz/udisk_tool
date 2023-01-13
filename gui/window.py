@@ -35,6 +35,8 @@ class MainWindow(QMainWindow):
         self.logger.debug(f"{self._scanner}")
         # 初始化搜索到的数据为空
         self.table_data = []
+        # 初始化搜索类型为按文件名搜索
+        self.search_func = self._scanner.search_file
         # 生成测试数据
         self.test()
         self.draw_table()
@@ -66,7 +68,9 @@ class MainWindow(QMainWindow):
     def search_click(self):
         # 点击搜索按钮
         search_str = self.ui.lineEdit.text()
-        self.ui.textEdit.setText(search_str)
+        self.logger.debug(f"search str: {search_str}, search func: {self.search_func}")
+        self.table_data = self.search_func(search_str)
+        self.draw_table()
 
     def draw_table(self):
         """
@@ -74,6 +78,7 @@ class MainWindow(QMainWindow):
         """
 
         # 设置行数
+        self.logger.debug(f"Table rows: {len(self.table_data)}")
         self.ui.tableWidget.setRowCount(len(self.table_data))
         # 设置表格内容不可编辑
         self.ui.tableWidget.setEditTriggers(QAbstractItemView.NoEditTriggers)
@@ -89,19 +94,30 @@ class MainWindow(QMainWindow):
                 1,  # 列索引
                 QTableWidgetItem(item.get("dir")),  # 表格内容: 文件所在路径
             )
+        self.logger.info(f"Complete the table to render")
 
+    # 搜索类型切换
+    def search_type_change(self):
+        id2fun = {
+            0: self._scanner.search_file,
+            1: self._scanner.search_dir,
+            2: self._scanner.search_ext,
+        }
+        self.logger.debug(self.ui.comboBox.currentIndex())
+        index = self.ui.comboBox.currentIndex()
+        self.logger.debug(f"{index=}")
+        self.search_func = id2fun.get(index)
+        self.logger.debug(f"{self.search_func=}")
 
-        # 搜索类型切换
+    # 打开选定文件
 
-        # 打开选定文件
+    # 打开选定文件夹
 
-        # 打开选定文件夹
+    # 编辑设置
 
-        # 编辑设置
+    # 获取当前字体大小
 
-        # 获取当前字体大小
-
-        # 更改字体大小
+    # 更改字体大小
 
     def right_click_menu(self, pos):
         print(self, pos)
@@ -161,7 +177,7 @@ class MainWindow(QMainWindow):
         # 点击搜索按钮
         self.ui.pushButton.clicked.connect(self.search_click)
         # 搜索类型切换
-
+        self.ui.comboBox.currentIndexChanged.connect(self.search_type_change)
         # 右键单击
 
         # 打开选定文件
