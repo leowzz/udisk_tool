@@ -34,20 +34,22 @@ class MainWindow(QMainWindow):
         self.logger.debug(f"{self._scanner}")
 
 
-def connect_to_slot(ui):
+def connect_to_slot(self):
     """
     将事件连接到槽
-    :param ui:
+    :param self:
     :return:
     """
-    from slots import (search_click, right_click_menu)
+    from gui.slots import (search_click, right_click_menu)
 
     # 将点击信号绑定到按钮
     # self.ui.pushButton.clicked.connect(self.handle_click)
     # # 设置允许弹出菜单  单击右键响应事件
-    # self.ui.tableWidget.setContextMenuPolicy(CoreQt.CustomContextMenu)
+    self.ui.tableWidget.setContextMenuPolicy(CoreQt.CustomContextMenu)
     # # 将信号请求连接到一个槽
-    # self.ui.tableWidget.customContextMenuRequested.connect(rightClickMenu)
+    self.ui.tableWidget.customContextMenuRequested.connect(
+        lambda customContextMenuRequested: right_click_menu(self, customContextMenuRequested)
+    )
 
     # 点击搜索按钮
 
@@ -67,10 +69,12 @@ def connect_to_slot(ui):
 
 
 def gui_start():
-    ui = MainWindow()
+    UI = MainWindow()
     # 连接信号与槽
-    connect_to_slot(ui)
+    from gui.slots import test
+    test(UI)
+    connect_to_slot(UI)
 
     # 显示界面
-    ui.show()
-    sys.exit(ui.app.exec_())
+    UI.show()
+    sys.exit(UI.app.exec_())

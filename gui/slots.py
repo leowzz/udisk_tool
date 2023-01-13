@@ -8,6 +8,10 @@
 槽方法
 """
 
+# from PyQt5.QtCore import pyqtSlot
+from PyQt5.QtWidgets import (
+    QApplication, QMainWindow, QPushButton, QPlainTextEdit, QMessageBox, QMenu
+)
 
 def search_click():
     # 点击搜索按钮
@@ -27,6 +31,7 @@ def search_click():
 # 更改字体大小
 
 def right_click_menu(self, pos):
+    print(self, pos)
     # 右键单击
     # pos 为单击鼠标右键的坐标  相对于窗口
     # 鼠标右键单击前两行弹出菜单，单击第三行没响应
@@ -36,7 +41,7 @@ def right_click_menu(self, pos):
     colNum = self.ui.tableWidget.selectionModel().selection().indexes()[0].column()
     # for i in self.ui.tableWidget.selectionModel().selection().indexes():
     #     rowNum = i.row()
-
+    print(rowNum, colNum)
     # 如果选择的行索引小于2，弹出上下文菜单
     if rowNum < 2:
         menu = QMenu()
