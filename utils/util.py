@@ -10,7 +10,7 @@ from pprint import pprint, pformat
 from utils.log import get_logger
 # from utils import setting
 
-logger = get_logger("utils")
+logger = get_logger("util")
 
 
 class ERROR:

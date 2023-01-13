@@ -8,24 +8,24 @@ import re
 import json
 from collections import defaultdict
 from utils.log import get_logger
-from utils.setting import setting_
+from utils.setting import setting__
 from utils.timer import timer, timer_ns
 
 
 class Scanner:
     def __init__(self):
         # 获取日志记录器
-        self.logger = get_logger("Scanner", logger_level=setting_.get_log_level())
-        self.logger.debug(f"got setting: {setting_!s}")
+        self.logger = get_logger("Scanner", logger_level=setting__.get_log_level())
+        self.logger.debug(f"got setting: {setting__!s}")
         # 初始化目录数据
         self.data_ = defaultdict(dict)
         # 获取扫描的根路径
-        self.scan_root = setting_.get('scan_root')
-        self.scan_dirs = setting_.get('scan_dirs')
+        self.scan_root = setting__.get('scan_root')
+        self.scan_dirs = setting__.get('scan_dirs')
         self.logger.debug(f"{self.scan_dirs=}")
         self.logger.debug(f"{self.scan_root=}")
         # 从设置信息中获取数据文件存储位置
-        self.data_file = setting_.get('data_file')
+        self.data_file = setting__.get('data_file')
 
         # 读取数据文件
         self.load_()
@@ -96,3 +96,7 @@ class Scanner:
     def search_ext(self, ext):
         # 搜索指定后缀名的文件
         return self._search(name=f"*.{ext}", Pattern=rf".*\.{ext}", dict_attr='files')
+
+
+scanner__ = Scanner()
+scanner__.logger.info(f"use scanner at: {id(scanner__)}")

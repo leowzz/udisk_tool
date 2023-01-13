@@ -24,23 +24,25 @@ class Setting:
         'data_file'    : 'data.json',
     }
 
-    def __init__(self, setting_path='setting.json'):
+    def __init__(self, setting_path='./setting.json'):
         """
-        设置信息类,
+        设置信息类
         :param setting_path: 设置文件所在路径
         """
+        # 获取日志记录器
         self.logger = get_logger('Setting', logger_level=DEBUG)
+        # 默认先记录一下设置文件所在位置
         self.logger.debug(f"{setting_path=}")
         self.setting_path = setting_path
         self.data = self.load_setting()
-        self.logger.debug(f"got setting from file: {os.path.abspath(self.setting_path)!s}")
 
         if not self.data:
-            self.data = self.default_setting
+            # 没有从设置文件中获得到信息
+            self.data = self.default_setting  # 将设置信息设为默认值
             self.logger.debug(f"no setting data, set to default: {self.data=!s}")
-            self.save_setting()
-        # setting.json中的设置信息不全, 使用默认参数更新
+            self.save_setting()  # 保存设置信息到文件
         elif len(self.data) < len(self._default_setting):
+            # setting.json中的设置信息不全, 使用默认参数更新
             self.logger.info(f"update setting from default")
             self.logger.debug(f"got setting from file: {self.data}")
             for key, value in self._default_setting.items():
@@ -49,6 +51,9 @@ class Setting:
                     self.data[key] = value
             self.save_setting()
 
+        # 获取完设置信息, 将日志记录器的日志等级 更改为设置信息内的等级
+        self.logger.setLevel(self.get_log_level())
+        # 初始化数据
         if self.data['from_drive']:
             # 如果设置为从磁盘根路径开始扫描, 则将scan_root设置为盘符
             self.data['scan_root'] = os.path.splitdrive(self.data['scan_root'])[0] + '\\'
@@ -64,8 +69,16 @@ class Setting:
         if not os.path.isfile(self.setting_path):
             self.logger.info(f"file not exists: {self.setting_path}")
             return
-        with open(self.setting_path, 'r', encoding='utf-8') as f:
-            return json.load(f)
+        try:
+            with open(self.setting_path, 'r', encoding='utf-8') as f:
+                __setting = json.load(f)
+                self.logger.debug(f"got setting from {os.path.abspath(self.setting_path)!s}: {__setting}")
+                return __setting
+        except json.decoder.JSONDecodeError as e:
+            # setting.json 文件内容错误
+            self.logger.error(f"catch err in reading setting.json -> {e}")
+            self.logger.info(f'can not get setting from {os.path.abspath(self.setting_path)!s}, set setting to default')
+            return
 
     def save_setting(self):
         """
@@ -110,5 +123,5 @@ class Setting:
 
 
 # 获取设置信息对象
-setting_ = Setting()
-setting_.logger.info(f'use global setting: {setting_}')
+setting__ = Setting()
+setting__.logger.info(f'use global setting: {setting__}, at{id(setting__)}')

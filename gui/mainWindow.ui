@@ -7,8 +7,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>622</width>
-    <height>492</height>
+    <width>627</width>
+    <height>501</height>
    </rect>
   </property>
   <property name="font">
@@ -37,6 +37,40 @@
             <height>30</height>
            </size>
           </property>
+          <property name="toolTip">
+           <string/>
+          </property>
+          <property name="inputMask">
+           <string/>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+          <property name="placeholderText">
+           <string>4566</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="comboBox">
+          <property name="currentText">
+           <string>files</string>
+          </property>
+          <item>
+           <property name="text">
+            <string>files</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>dirs</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>ext</string>
+           </property>
+          </item>
          </widget>
         </item>
         <item>
@@ -75,6 +109,9 @@
           </property>
           <property name="horizontalScrollMode">
            <enum>QAbstractItemView::ScrollPerItem</enum>
+          </property>
+          <property name="sortingEnabled">
+           <bool>true</bool>
           </property>
           <property name="rowCount">
            <number>0</number>
@@ -155,7 +192,7 @@ p, li { white-space: pre-wrap; }
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>622</width>
+     <width>627</width>
      <height>27</height>
     </rect>
    </property>

@@ -5,9 +5,9 @@
 # @file timer.py
 import time
 import functools
-from utils.setting import setting_
+from utils.setting import setting__
 from utils.log import get_logger
-logger = get_logger("timer", setting_.get_log_level())
+logger = get_logger("timer", setting__.get_log_level())
 
 
 def timer(func):

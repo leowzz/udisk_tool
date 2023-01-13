@@ -30,11 +30,20 @@ class Ui_MainWindow(object):
         self.horizontalLayout.setObjectName("horizontalLayout")
         self.lineEdit = QtWidgets.QLineEdit(self.centralwidget)
         self.lineEdit.setMinimumSize(QtCore.QSize(0, 30))
-        self.lineEdit.setObjectName("lineEdit")
+        self.lineEdit.setObjectName("searchEdit")
+        # 搜索输入框背景文字
+        self.lineEdit.setPlaceholderText("此处输入要搜索的名称")
+        self.lineEdit.setAlignment(QtCore.Qt.AlignCenter)
         self.horizontalLayout.addWidget(self.lineEdit)
+        self.comboBox = QtWidgets.QComboBox()
+        self.comboBox.addItem("")
+        self.comboBox.addItem("")
+        self.comboBox.addItem("")
+        self.comboBox.setObjectName('typeComboBox')
+        self.horizontalLayout.addWidget(self.comboBox)
         self.pushButton = QtWidgets.QPushButton(self.centralwidget)
         self.pushButton.setMinimumSize(QtCore.QSize(0, 30))
-        self.pushButton.setObjectName("pushButton")
+        self.pushButton.setObjectName("searchBut")
         self.horizontalLayout.addWidget(self.pushButton)
         self.verticalLayout_2.addLayout(self.horizontalLayout)
         self.verticalLayout = QtWidgets.QVBoxLayout()
@@ -69,6 +78,8 @@ class Ui_MainWindow(object):
 
         self.tableWidget.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)
         self.tableWidget.horizontalHeader().setSectionResizeMode(0, QHeaderView.Interactive)
+        # 设置允许按列排序
+        self.tableWidget.setSortingEnabled(True)
         """
         # 用户可调整，默认值为setDefaultSectionSized的值
         table_obj.horizontalHeader().setSectionResizeMode(QHeaderView.Interactive)
@@ -142,7 +153,10 @@ class Ui_MainWindow(object):
         item.setText(_translate("MainWindow", "名称"))
         item = self.tableWidget.horizontalHeaderItem(1)
         item.setText(_translate("MainWindow", "路径"))
-
+        self.comboBox.setCurrentText(_translate("MainWindow", "文件"))
+        self.comboBox.setItemText(0, _translate("MainWindow", "文件"))
+        self.comboBox.setItemText(1, _translate("MainWindow", "文件夹"))
+        self.comboBox.setItemText(2, _translate("MainWindow", "后缀名"))
         # 设置表格标题加粗
         bold_font = self.tableWidget.horizontalHeader().font()
         bold_font.setBold(True)

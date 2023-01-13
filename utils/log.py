@@ -37,7 +37,7 @@ def get_logger(name="logger", logger_level=logging.INFO, log_dir=r'./log', encod
     logger.setLevel(logger_level)
     # 创建一个格式化器
     formatter = logging.Formatter(
-        fmt=f"%(asctime)s %(name)-{len(name)}s %(levelname)-5s [line:%(lineno)d] %(funcName)s - %(message)s",
+        fmt=f"%(asctime)s %(name)-s %(levelname)-5s [line:%(lineno)d] %(funcName)s - %(message)s",
         datefmt="%Y-%m-%d %H:%M:%S"
     )
     # 创建流处理器
