@@ -11,6 +11,7 @@ from gui.ui_mainWindow import Ui_MainWindow
 from PyQt5.QtCore import Qt as CoreQt
 import sys
 from utils.log import get_logger
+from utils.util import exec_
 
 
 class MainWindow(QMainWindow):
@@ -110,6 +111,8 @@ class MainWindow(QMainWindow):
         self.logger.debug(f"{self.search_func=}")
 
     # 打开选定文件
+    def open_(self):
+        ...
 
     # 打开选定文件夹
 
@@ -120,42 +123,47 @@ class MainWindow(QMainWindow):
     # 更改字体大小
 
     def right_click_menu(self, pos):
-        print(self, pos)
-        # 右键单击
+        """
+        右键菜单有关方法
+        :param pos: PyQt5.QtCore.QPoint pyqt坐标对象
+        :return:
+        """
         # pos 为单击鼠标右键的坐标  相对于窗口
+        self.logger.debug(f"{pos=}")
         # 鼠标右键单击前两行弹出菜单，单击第三行没响应
-        print(pos)
-        # 当前选中的行
+        # 获取当前选中的 行,列 索引
         rowNum = self.ui.tableWidget.selectionModel().selection().indexes()[0].row()
         colNum = self.ui.tableWidget.selectionModel().selection().indexes()[0].column()
-        # for i in self.ui.tableWidget.selectionModel().selection().indexes():
-        #     rowNum = i.row()
-        print(rowNum, colNum)
-        # 如果选择的行索引小于2，弹出上下文菜单
-        if rowNum < 2:
-            menu = QMenu()
+        self.logger.info(f"click table item at [row: {rowNum}, col: {colNum}]")
+        if colNum == 0:
+            menu = QMenu()  # 创建菜单
             item1 = menu.addAction("打开")
             item2 = menu.addAction("打开所在文件夹")
-            item3 = menu.addAction("菜单项3")
             # 相对于窗口的坐标系转换为相对于屏幕的坐标系  映射到全局
             screePos = self.ui.tableWidget.mapToGlobal(pos)
-            print(screePos)
-            # 被阻塞
-            # action = menu.exec(pos)
-            action = menu.exec(screePos)
-            if action == item1:
-                print('选择了第1个菜单项',
-                      self.ui.tableWidget.item(rowNum, colNum).text(),
-                      self.ui.tableWidget.item(rowNum, 0).text(),
-                      self.ui.tableWidget.item(rowNum, 1).text())
-            elif action == item2:
-                print('选择了第2个菜单项', self.ui.tableWidget.item(rowNum, 0).text(),
-                      self.ui.tableWidget.item(rowNum, 1).text())
-            elif action == item3:
-                print('选择了第3个菜单项', self.ui.tableWidget.item(rowNum, 0).text(),
-                      self.ui.tableWidget.item(rowNum, 1).text())
-            else:
-                return
+            action = menu.exec(screePos)  # 获取全局坐标系下该位置的动作
+            if action == item1:  # 打开文件
+                self.logger.info(f"选择了菜单项: {item1.text()}")
+                abs_path = self.table_data[rowNum].get("abs")
+                self.logger.debug(f"select file abs path: {abs_path}")
+                exec_(abs_path)
+            elif action == item2:  # 打开文件夹
+                self.logger.info(f"选择了菜单项: {item1.text()}")
+                dir_path = self.table_data[rowNum].get("dir")
+                self.logger.debug(f"select file abs path: {dir_path}")
+                exec_(dir_path)
+        elif colNum == 1:
+            menu = QMenu()
+            item1 = menu.addAction("打开文件夹")
+            # 相对于窗口的坐标系转换为相对于屏幕的坐标系  映射到全局
+            screePos = self.ui.tableWidget.mapToGlobal(pos)
+            action = menu.exec(screePos)  # 获取全局坐标系下该位置的动作
+            if action == item1:  # 打开文件
+                self.logger.info(f"选择了菜单项: {item1.text()}")
+                dir_path = self.table_data[rowNum].get("dir")
+                self.logger.debug(f"select file abs path: {dir_path}")
+                exec_(dir_path)
+        return
 
     def connect_to_slot(self):
         """
@@ -164,24 +172,16 @@ class MainWindow(QMainWindow):
         :return:
         """
 
-        # 将点击信号绑定到按钮
-        # self.ui.pushButton.clicked.connect(self.handle_click)
-        # # 设置允许弹出菜单  单击右键响应事件
+        # 设置允许弹出菜单 单击右键响应事件
         self.ui.tableWidget.setContextMenuPolicy(CoreQt.CustomContextMenu)
-        # # 将信号请求连接到一个槽
-        self.ui.tableWidget.customContextMenuRequested.connect(self.right_click_menu)
-        # self.ui.tableWidget.customContextMenuRequested.connect(
-        #     lambda customContextMenuRequested: right_click_menu(self, customContextMenuRequested)
-        # )
         # 在搜索框按下回车
         self.ui.lineEdit.returnPressed.connect(self.search_click)
-
         # 点击搜索按钮
         self.ui.pushButton.clicked.connect(self.search_click)
         # 搜索类型切换
         self.ui.comboBox.currentIndexChanged.connect(self.search_type_change)
         # 右键单击
-
+        self.ui.tableWidget.customContextMenuRequested.connect(self.right_click_menu)
         # 打开选定文件
 
         # 打开选定文件夹
