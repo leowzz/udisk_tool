@@ -173,6 +173,8 @@ class MainWindow(QMainWindow):
         # self.ui.tableWidget.customContextMenuRequested.connect(
         #     lambda customContextMenuRequested: right_click_menu(self, customContextMenuRequested)
         # )
+        # 在搜索框按下回车
+        self.ui.lineEdit.returnPressed.connect(self.search_click)
 
         # 点击搜索按钮
         self.ui.pushButton.clicked.connect(self.search_click)
