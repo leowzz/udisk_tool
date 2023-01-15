@@ -13,6 +13,9 @@ import sys
 from utils.log import get_logger
 from utils.util import exec_
 
+fileNameColIndex = 0
+dirNameColIndex = 1
+
 
 class MainWindow(QMainWindow):
     def __init__(self):
@@ -122,7 +125,7 @@ class MainWindow(QMainWindow):
 
     # 更改字体大小
 
-    def right_click_menu(self, pos):
+    def right_click_table_item(self, pos):
         """
         右键菜单有关方法
         :param pos: PyQt5.QtCore.QPoint pyqt坐标对象
@@ -135,7 +138,7 @@ class MainWindow(QMainWindow):
         rowNum = self.ui.tableWidget.selectionModel().selection().indexes()[0].row()
         colNum = self.ui.tableWidget.selectionModel().selection().indexes()[0].column()
         self.logger.info(f"click table item at [row: {rowNum}, col: {colNum}]")
-        if colNum == 0:
+        if colNum == fileNameColIndex:
             menu = QMenu()  # 创建菜单
             item1 = menu.addAction("打开")
             item2 = menu.addAction("打开所在文件夹")
@@ -152,7 +155,7 @@ class MainWindow(QMainWindow):
                 dir_path = self.table_data[rowNum].get("dir")
                 self.logger.debug(f"select file abs path: {dir_path}")
                 exec_(dir_path)
-        elif colNum == 1:
+        elif colNum == dirNameColIndex:
             menu = QMenu()
             item1 = menu.addAction("打开文件夹")
             # 相对于窗口的坐标系转换为相对于屏幕的坐标系  映射到全局
@@ -164,6 +167,20 @@ class MainWindow(QMainWindow):
                 self.logger.debug(f"select file abs path: {dir_path}")
                 exec_(dir_path)
         return
+
+    def double_click_table_item(self, index):
+        text = index.data()
+        row = index.row()
+        col = index.column()
+        self.logger.debug(f"double clicked :{text} at: {row=}, {col=}")
+        if col == fileNameColIndex:  # 打开文件
+            abs_path = self.table_data[row].get('abs')  # 用户文件的绝对路径
+            self.logger.info(f"open file {abs_path}")
+            exec_(abs_path)
+        elif col == dirNameColIndex:  # 打开文件夹
+            abs_path = self.table_data[row].get('dir')  # 用户文件的绝对路径
+            self.logger.info(f"open dir {abs_path}")
+            exec_(abs_path)
 
     def connect_to_slot(self):
         """
@@ -181,9 +198,9 @@ class MainWindow(QMainWindow):
         # 搜索类型切换
         self.ui.comboBox.currentIndexChanged.connect(self.search_type_change)
         # 右键单击
-        self.ui.tableWidget.customContextMenuRequested.connect(self.right_click_menu)
-        # 打开选定文件
-
+        self.ui.tableWidget.customContextMenuRequested.connect(self.right_click_table_item)
+        # 双击打开 文件或文件夹
+        self.ui.tableWidget.doubleClicked.connect(self.double_click_table_item)
         # 打开选定文件夹
 
         # 编辑设置
