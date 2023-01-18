@@ -82,8 +82,11 @@ class MainWindow(QMainWindow):
         """
 
         # 设置行数
-        self.logger.debug(f"Table rows: {len(self.table_data)}")
-        self.ui.tableWidget.setRowCount(len(self.table_data))
+        table_data_len = len(self.table_data)
+        self.logger.debug(f"Table rows: {table_data_len}")
+        self.ui.tableWidget.setRowCount(table_data_len)
+        # 状态栏上显示行数
+        self.ui.statusbar.showMessage(f"Table rows: {table_data_len}")
         # 设置表格内容不可编辑
         self.ui.tableWidget.setEditTriggers(QAbstractItemView.NoEditTriggers)
         # 逐行渲染表格
@@ -112,10 +115,6 @@ class MainWindow(QMainWindow):
         self.logger.debug(f"{index=}")
         self.search_func = id2fun.get(index)
         self.logger.debug(f"{self.search_func=}")
-
-    # 打开选定文件
-    def open_(self):
-        ...
 
     # 打开选定文件夹
 
@@ -182,6 +181,16 @@ class MainWindow(QMainWindow):
             self.logger.info(f"open dir {abs_path}")
             exec_(abs_path)
 
+    def re_scan(self, onclick):
+        self.logger.debug(f"menubar: {onclick=}")
+        if onclick:
+            self.logger.debug(f"clicked rescan in menubar")
+            # 重新扫描磁盘
+            self._scanner.scan_()
+            # 从scanner获取扫描到的数据, 赋值给table_data
+            self.table_data = self._scanner.data_
+            self.logger.info(f"finished rescan")
+
     def connect_to_slot(self):
         """
         将事件连接到槽
@@ -206,6 +215,10 @@ class MainWindow(QMainWindow):
         # 获取当前字体大小
 
         # 更改字体大小
+
+        # 重新扫描文件
+        self.ui.action.triggered.connect(self.re_scan)
+        self.ui.action.setCheckable(True)
 
 
 def gui_start():
