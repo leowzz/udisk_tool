@@ -35,6 +35,16 @@ class Ui_MainWindow(object):
         self.lineEdit.setPlaceholderText("此处输入要搜索的名称")
         self.lineEdit.setAlignment(QtCore.Qt.AlignCenter)
         self.horizontalLayout.addWidget(self.lineEdit)
+        # 字体大小提示标签
+        self.label = QtWidgets.QLabel(self.centralwidget)
+        self.label.setObjectName("label")
+        self.horizontalLayout.addWidget(self.label)
+        # 字体大小设置
+        self.fontSize = QtWidgets.QSpinBox(self.centralwidget)
+        self.fontSize.setProperty("value", 12)
+        self.fontSize.setObjectName("fontSize")
+        self.horizontalLayout.addWidget(self.fontSize)
+        # 搜索类型
         self.comboBox = QtWidgets.QComboBox()
         self.comboBox.addItem("")
         self.comboBox.addItem("")
@@ -98,17 +108,17 @@ class Ui_MainWindow(object):
         # self.tableWidget.setColumnWidth(1, 400)
 
         self.verticalLayout.addWidget(self.tableWidget)
-        self.textEdit = QtWidgets.QTextEdit(self.centralwidget)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(1)
-        sizePolicy.setHeightForWidth(self.textEdit.sizePolicy().hasHeightForWidth())
-        self.textEdit.setSizePolicy(sizePolicy)
-        self.textEdit.setMinimumSize(QtCore.QSize(0, 20))
-        self.textEdit.setMaximumSize(QtCore.QSize(16777212, 3204))
-        self.textEdit.setBaseSize(QtCore.QSize(0, 0))
-        self.textEdit.setObjectName("textEdit")
-        self.verticalLayout.addWidget(self.textEdit)
+        # self.textEdit = QtWidgets.QTextEdit(self.centralwidget)
+        # sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
+        # sizePolicy.setHorizontalStretch(0)
+        # sizePolicy.setVerticalStretch(1)
+        # sizePolicy.setHeightForWidth(self.textEdit.sizePolicy().hasHeightForWidth())
+        # self.textEdit.setSizePolicy(sizePolicy)
+        # self.textEdit.setMinimumSize(QtCore.QSize(0, 20))
+        # self.textEdit.setMaximumSize(QtCore.QSize(16777212, 3204))
+        # self.textEdit.setBaseSize(QtCore.QSize(0, 0))
+        # self.textEdit.setObjectName("textEdit")
+        # self.verticalLayout.addWidget(self.textEdit)
         self.verticalLayout_2.addLayout(self.verticalLayout)
         self.verticalLayout_3.addLayout(self.verticalLayout_2)
         MainWindow.setCentralWidget(self.centralwidget)
@@ -153,6 +163,7 @@ class Ui_MainWindow(object):
         item.setText(_translate("MainWindow", "名称"))
         item = self.tableWidget.horizontalHeaderItem(1)
         item.setText(_translate("MainWindow", "路径"))
+        self.label.setText(_translate("MainWindow", "字体大小:"))
         self.comboBox.setCurrentText(_translate("MainWindow", "文件"))
         self.comboBox.setItemText(0, _translate("MainWindow", "文件"))
         self.comboBox.setItemText(1, _translate("MainWindow", "文件夹"))
@@ -162,12 +173,12 @@ class Ui_MainWindow(object):
         bold_font.setBold(True)
         self.tableWidget.horizontalHeader().setFont(bold_font)
 
-        self.textEdit.setHtml(
-            _translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-                                     "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-                                     "p, li { white-space: pre-wrap; }\n"
-                                     "</style></head><body style=\" font-family:\'Microsoft YaHei UI\'; font-size:12pt; font-weight:400; font-style:normal;\">\n"
-                                     "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>"))
+        # self.textEdit.setHtml(
+        #     _translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+        #                              "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+        #                              "p, li { white-space: pre-wrap; }\n"
+        #                              "</style></head><body style=\" font-family:\'Microsoft YaHei UI\'; font-size:12pt; font-weight:400; font-style:normal;\">\n"
+        #                              "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>"))
         self.menu_U.setTitle(_translate("MainWindow", "文件"))
         self.menu.setTitle(_translate("MainWindow", "设置"))
         self.toolBar.setWindowTitle(_translate("MainWindow", "toolBar"))
