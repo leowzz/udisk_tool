@@ -172,7 +172,7 @@ class MainWindow(QMainWindow):
         text = index.data()
         row = index.row()
         col = index.column()
-        self.logger.debug(f"double clicked :{text} at: {row=}, {col=}")
+        self.logger.debug(f"double clicked: {text}. at: {{{row=}, {col=}}}")
         if col == fileNameColIndex:  # 打开文件
             abs_path = self.table_data[row].get('abs')  # 用户文件的绝对路径
             self.logger.info(f"open file {abs_path}")
@@ -201,8 +201,6 @@ class MainWindow(QMainWindow):
         self.ui.tableWidget.customContextMenuRequested.connect(self.right_click_table_item)
         # 双击打开 文件或文件夹
         self.ui.tableWidget.doubleClicked.connect(self.double_click_table_item)
-        # 打开选定文件夹
-
         # 编辑设置
 
         # 获取当前字体大小

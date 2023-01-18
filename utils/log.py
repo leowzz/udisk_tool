@@ -53,7 +53,7 @@ def get_logger(name="logger", logger_level=logging.INFO, log_dir=r'./log', encod
         filename=os.path.join(log_dir, filename),
         mode='a',
         maxBytes=1 * 1024 * 1024,  # 单文件最大字节数: 1MB
-        backupCount=3,  # 备份日志数
+        # backupCount=3,  # 备份日志数
         encoding=encoding,
     )
     # file_handler = logging.FileHandler(

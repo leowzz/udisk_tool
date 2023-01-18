@@ -30,6 +30,7 @@ class Scanner:
         # 读取数据文件
         self.load_()
 
+    @timer_ns
     def scan_(self):
         # 扫描磁盘
         for dir_ in self.scan_dirs:
