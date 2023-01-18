@@ -38,7 +38,7 @@ class Setting:
 
         if not self.data:
             # 没有从设置文件中获得到信息
-            self.data = self.default_setting  # 将设置信息设为默认值
+            self.data = self._default_setting  # 将设置信息设为默认值
             self.logger.debug(f"no setting data, set to default: {self.data=!s}")
             self.save_setting()  # 保存设置信息到文件
         elif len(self.data) < len(self._default_setting):

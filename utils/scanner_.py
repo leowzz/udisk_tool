@@ -32,7 +32,12 @@ class Scanner:
 
     @timer_ns
     def scan_(self):
-        # 扫描磁盘
+        """
+        扫描磁盘, 构建索引, 自动保存到文件, 将扫描到的数据赋值给 self.data_
+        """
+        self.logger.debug(f"{self.scan_root=}, {self.scan_dirs=}")
+        self.data_.clear()  # 清空字典中的数据
+        self.logger.debug(f"{type(self.data_)=}, {len(self.data_)=}")
         for dir_ in self.scan_dirs:
             for root, dirs, files in os.walk(rf"{self.scan_root}\{dir_}"):
                 self.data_[root]['dirs'] = dirs
@@ -50,7 +55,8 @@ class Scanner:
             self.logger.info(f"data_file not exists, auto scan, got: {len(self.data_)} items")
             return
         with open(self.data_file, 'r', encoding='utf-8') as f:
-            self.data_ = json.load(f)
+            self.data_ = defaultdict(dict, json.load(f))
+            self.logger.debug(f"{type(self.data_)=}")
         self.logger.info(f"load data from: {os.path.abspath(self.data_file)}, got: {len(self.data_)} items")
 
     def dump_(self):
