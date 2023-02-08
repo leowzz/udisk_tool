@@ -188,7 +188,7 @@ class Ui_MainWindow(object):
         self.action_3.setText(_translate("MainWindow", "首选项"))
         self.action_4.setText(_translate("MainWindow", "更改字体"))
         # 设置窗口图标
-        MainWindow.setWindowIcon(QIcon("./imgs/main.ico"))
+        MainWindow.setWindowIcon(QIcon("./leo.ico"))
         # 设置窗口标题
         MainWindow.setWindowTitle(_translate("MainWindow", "uDisk_tool"))  # 第二个参数：窗口标题
 
