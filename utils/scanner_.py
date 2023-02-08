@@ -88,7 +88,6 @@ class Scanner:
                         'dir' : dir_path,
                         'name': file_name,
                     })
-                    self.logger.info(f"got: {dir_path=!s}, {file_name=}")
         self.logger.debug(f"{res_data=!s}")
         return res_data
 
