@@ -229,7 +229,6 @@ class MainWindow(QMainWindow):
         self.ui.fontSize.valueChanged.connect(self.change_font_size)
         # 重新扫描文件
         self.ui.action.triggered.connect(self.re_scan)
-        self.ui.action.setCheckable(True)
 
 
 def gui_start():
