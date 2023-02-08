@@ -43,14 +43,16 @@ setting.json
 data.json
 ```json
 {
-    "A://01_软件环境\\01_工具\\屏幕拓展工具": {
+    "A://01_软件环境\\01_工具": {
       "dirs": [
         "space_desk",
         "Wired_XDisplay"
       ],
       "files": [
-        "space_desk.apk",
-        "space_desk.zip"
+        "Iriun WinWebcam-2.6.9.exe",
+        "FreeFileSync.zip",
+        "Listary.exe",
+        "Q-Dir.zip"
       ]
     }
 }
