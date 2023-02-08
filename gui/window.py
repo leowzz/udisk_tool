@@ -44,6 +44,8 @@ class MainWindow(QMainWindow):
         # 初始化要展示的数据, 默认是所有数据
         self.table_data = self.search_func('')
         self.draw_table()
+        # 状态栏上显示行数
+        self.ui.statusbar.showMessage(f"rescan rows: {len(self.table_data)}")
         # 连接信号与槽
         self.connect_to_slot()
 
