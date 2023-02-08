@@ -41,33 +41,11 @@ class MainWindow(QMainWindow):
         self.table_data = []
         # 初始化搜索类型为按文件名搜索
         self.search_func = self._scanner.search_file
-        # 生成测试数据
-        self.test()
+        # 初始化要展示的数据, 默认是所有数据
+        self.table_data = self.search_func('')
         self.draw_table()
         # 连接信号与槽
         self.connect_to_slot()
-
-    def test(self):
-        self.table_data = [{
-            'abs': 'A:\\01_软件环境\\01_工具\\格式转换\\Y右键文件转换FileConverter-1.2.3-x64-setup.msi',
-            'dir': 'A:\\01_软件环境\\01_工具\\格式转换', 'name': 'Y右键文件转换FileConverter-1.2.3-x64-setup.msi'
-        }, {
-            'abs' : 'A:\\01_软件环境\\01_工具\\键鼠工具\\02_右键工具.exe', 'dir': 'A:\\01_软件环境\\01_工具\\键鼠工具',
-            'name': '02_右键工具.exe'
-        }, {
-            'abs': 'A:\\01_软件环境\\01_工具\\键鼠工具\\Y右键菜单神器Easy Context Menu1.6绿色汉化版.rar',
-            'dir': 'A:\\01_软件环境\\01_工具\\键鼠工具', 'name': 'Y右键菜单神器Easy Context Menu1.6绿色汉化版.rar'
-        }, {
-            'abs': 'A:\\01_软件环境\\01_工具\\键鼠工具\\右键菜单编辑器.exe',
-            'dir': 'A:\\01_软件环境\\01_工具\\键鼠工具', 'name': '右键菜单编辑器.exe'
-        }]
-        # # 设置行数
-        # self.ui.tableWidget.setRowCount(3)
-        # # 设置表格内容不可编辑
-        # self.ui.tableWidget.setEditTriggers(QAbstractItemView.NoEditTriggers)
-        # self.ui.tableWidget.setItem(0, 0, QTableWidgetItem('右键菜单编辑器.exe', ))
-        # self.ui.tableWidget.setItem(0, 1, QTableWidgetItem("J:01_工具\\键鼠工具\\"))
-        # self.ui.tableWidget.setItem(1, 0, QTableWidgetItem('右键菜单编辑器右键菜单编辑器.exe', ))
 
     def search_click(self):
         # 点击搜索按钮
@@ -115,14 +93,6 @@ class MainWindow(QMainWindow):
         self.logger.debug(f"{index=}")
         self.search_func = id2fun.get(index)
         self.logger.debug(f"{self.search_func=}")
-
-    # 打开选定文件夹
-
-    # 编辑设置
-
-    # 获取当前字体大小
-
-    # 更改字体大小
 
     def right_click_table_item(self, pos):
         """
@@ -181,17 +151,19 @@ class MainWindow(QMainWindow):
             self.logger.info(f"open dir {abs_path}")
             exec_(abs_path)
 
-    def re_scan(self, onclick):
-        self.logger.debug(f"menubar: {onclick=}")
-        if onclick:
-            self.logger.debug(f"clicked rescan in menubar")
-            # 重新扫描磁盘
-            self._scanner.scan_()
-            # 从scanner获取扫描到的数据, 赋值给table_data
-            self.table_data = self._scanner.data_
-            self.logger.info(f"finished rescan")
+    def re_scan(self):
+        """重新扫描路径"""
+        self.logger.debug(f"clicked rescan in menubar")
+        # 重新扫描磁盘
+        self._scanner.scan_()
+        # 从scanner获取扫描到的数据, 赋值给table_data
+        self.table_data = self._scanner.data_
+        # 状态栏上显示行数
+        self.ui.statusbar.showMessage(f"rescan rows: {len(self.table_data)}")
+        self.logger.info(f"finished rescan")
 
     def change_font_size(self):
+        """更改字体大小"""
         value = self.ui.fontSize.value()
         self.logger.info(f"font size changed to: {value}")
         font = self.font()
@@ -199,6 +171,7 @@ class MainWindow(QMainWindow):
         self.setFont(font)
 
     def adjust_font(self):
+        """更改字体"""
         # 获取当前字体大小, 初始化对话框对象
         font, ok = QFontDialog.getFont(self.font())
         if ok:
