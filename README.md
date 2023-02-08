@@ -18,7 +18,19 @@ U盘文件搜索工具
 ### 配置文件
 
 setting.json
-![](./imgs/setting.png)
+```json
+{
+    "scan_dirs": [
+        "01_工具",
+        "01_环境"
+    ],
+    "from_drive": true,
+    "scan_root": "J:\\",
+    "auto_save": true,
+    "logging_level": 20,
+    "data_file": "data.json"
+}
+```
 - scan_dirs: 要扫描的文件夹
 - from_drive: 从驱动器开始扫描
 - scan_root: 扫描的根路径, 如果from_drive为true则忽略此路径, 而是从驱动器根路径开始扫描
@@ -28,7 +40,21 @@ setting.json
 
 ### 索引信息文件
 
-![](./imgs/data.png)
+data.json
+```json
+{
+    "A://01_软件环境\\01_工具\\屏幕拓展工具": {
+      "dirs": [
+        "space_desk",
+        "Wired_XDisplay"
+      ],
+      "files": [
+        "space_desk.apk",
+        "space_desk.zip"
+      ]
+    }
+}
+```
 - key: 父路径
 - dirs: 父路径下的文件夹
 - files: 父路径下的文件
