@@ -191,6 +191,13 @@ class MainWindow(QMainWindow):
             self.table_data = self._scanner.data_
             self.logger.info(f"finished rescan")
 
+    def change_font_size(self):
+        value = self.ui.fontSize.value()
+        self.logger.info(f"font size changed to: {value}")
+        font = self.font()
+        font.setPointSize(value)
+        self.setFont(font)
+
     def adjust_font(self):
         # 获取当前字体大小, 初始化对话框对象
         font, ok = QFontDialog.getFont(self.font())
@@ -216,10 +223,10 @@ class MainWindow(QMainWindow):
         self.ui.tableWidget.customContextMenuRequested.connect(self.right_click_table_item)
         # 双击打开 文件或文件夹
         self.ui.tableWidget.doubleClicked.connect(self.double_click_table_item)
-        # 编辑设置
-
-        # 更改字体大小
+        # 更改字体
         self.ui.action_4.triggered.connect(self.adjust_font)
+        # 更改字体大小
+        self.ui.fontSize.valueChanged.connect(self.change_font_size)
         # 重新扫描文件
         self.ui.action.triggered.connect(self.re_scan)
         self.ui.action.setCheckable(True)
