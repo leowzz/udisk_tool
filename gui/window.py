@@ -160,6 +160,9 @@ class MainWindow(QMainWindow):
         self.table_data = self._scanner.data_
         # 状态栏上显示行数
         self.ui.statusbar.showMessage(f"rescan rows: {len(self.table_data)}")
+        # 重新渲染表格
+        self.table_data = self.search_func('')
+        self.draw_table()
         self.logger.info(f"finished rescan")
 
     def change_font_size(self):
