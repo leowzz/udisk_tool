@@ -146,8 +146,9 @@ class Ui_MainWindow(object):
         self.action_4.setObjectName("action_4")
         # self.menu_U.addAction(self.action_2)
         self.menu_U.addAction(self.action)
-        self.menu.addAction(self.action_3)
         self.menu.addAction(self.action_4)
+        # # 暂时关闭首选项设置按钮
+        # self.menu.addAction(self.action_3)
         self.menubar.addAction(self.menu_U.menuAction())
         self.menubar.addAction(self.menu.menuAction())
 
@@ -185,4 +186,4 @@ class Ui_MainWindow(object):
         self.action.setText(_translate("MainWindow", "重新扫描"))
         # self.action_2.setText(_translate("MainWindow", "打开"))
         self.action_3.setText(_translate("MainWindow", "首选项"))
-        self.action_4.setText(_translate("MainWindow", "调节字体"))
+        self.action_4.setText(_translate("MainWindow", "更改字体"))
