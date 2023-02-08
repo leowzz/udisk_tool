@@ -39,7 +39,7 @@ class Scanner:
         self.data_.clear()  # 清空字典中的数据
         self.logger.debug(f"{type(self.data_)=}, {len(self.data_)=}")
         for dir_ in self.scan_dirs:
-            for root, dirs, files in os.walk(rf"{self.scan_root}\{dir_}"):
+            for root, dirs, files in os.walk(os.path.join(self.scan_root, dir_)):
                 self.data_[root]['dirs'] = dirs
                 self.data_[root]['files'] = files
         self.logger.debug(f"scan data from disk, got: {len(self.data_)}")
@@ -58,7 +58,7 @@ class Scanner:
             self.data_ = defaultdict(dict, json.load(f))
             self.logger.debug(f"{type(self.data_)=}")
         self.logger.info(f"load data from: {os.path.abspath(self.data_file)}, got: {len(self.data_)} items")
-    
+
     def dump_(self):
         # 将数据保存到文件
         with open(self.data_file, 'w', encoding='utf-8') as f:

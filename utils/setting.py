@@ -13,14 +13,13 @@ class Setting:
     _default_setting = {
         "scan_dirs"    : [
             "01_工具",
-            "02_环境",
-            "03_Tool"
+            "01_环境"
         ],
-        'from_drive'   : False,
-        # 'scan_root' : os.getcwd(),
-        'scan_root'    : r"A:\01_软件环境",
-        'auto_save'    : True,
-        "logging_level": 10,
+        'from_drive'   : True,  # 从驱动器根路径开始扫描
+        'scan_root'    : os.getcwd(),
+        # 'scan_root'    : r"A:\01_软件环境",
+        'auto_save'    : True,  # 设置信息自动保存控制
+        "logging_level": 20,  # 日志记录等级 10: debug, 20: info
         'data_file'    : 'data.json',
     }
 
