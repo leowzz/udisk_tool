@@ -185,4 +185,4 @@ class Ui_MainWindow(object):
         self.action.setText(_translate("MainWindow", "重新扫描"))
         # self.action_2.setText(_translate("MainWindow", "打开"))
         self.action_3.setText(_translate("MainWindow", "首选项"))
-        self.action_4.setText(_translate("MainWindow", "字体大小"))
+        self.action_4.setText(_translate("MainWindow", "调节字体"))

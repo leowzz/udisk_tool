@@ -4,7 +4,7 @@
 # @date 2023/1/11
 # @file window.py
 from PyQt5.QtWidgets import (
-    QApplication, QMainWindow, QPushButton, QPlainTextEdit, QMessageBox, QMenu,
+    QApplication, QMainWindow, QPushButton, QPlainTextEdit, QMessageBox, QMenu, QFontDialog,
 )
 from PyQt5.Qt import QTableWidgetItem, QAbstractItemView
 from gui.ui_mainWindow import Ui_MainWindow
@@ -191,6 +191,12 @@ class MainWindow(QMainWindow):
             self.table_data = self._scanner.data_
             self.logger.info(f"finished rescan")
 
+    def adjust_font(self):
+        # 获取当前字体大小
+        font, ok = QFontDialog.getFont()
+        if ok:
+            self.setFont(font)
+
     def connect_to_slot(self):
         """
         将事件连接到槽
@@ -212,10 +218,8 @@ class MainWindow(QMainWindow):
         self.ui.tableWidget.doubleClicked.connect(self.double_click_table_item)
         # 编辑设置
 
-        # 获取当前字体大小
-
         # 更改字体大小
-
+        self.ui.action_4.triggered.connect(self.adjust_font)
         # 重新扫描文件
         self.ui.action.triggered.connect(self.re_scan)
         self.ui.action.setCheckable(True)

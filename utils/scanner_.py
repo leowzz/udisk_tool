@@ -58,7 +58,7 @@ class Scanner:
             self.data_ = defaultdict(dict, json.load(f))
             self.logger.debug(f"{type(self.data_)=}")
         self.logger.info(f"load data from: {os.path.abspath(self.data_file)}, got: {len(self.data_)} items")
-
+    
     def dump_(self):
         # 将数据保存到文件
         with open(self.data_file, 'w', encoding='utf-8') as f:
