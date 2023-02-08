@@ -192,8 +192,8 @@ class MainWindow(QMainWindow):
             self.logger.info(f"finished rescan")
 
     def adjust_font(self):
-        # 获取当前字体大小
-        font, ok = QFontDialog.getFont()
+        # 获取当前字体大小, 初始化对话框对象
+        font, ok = QFontDialog.getFont(self.font())
         if ok:
             self.setFont(font)
 
