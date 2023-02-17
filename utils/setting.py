@@ -10,6 +10,7 @@ from utils.log import get_logger
 
 
 class Setting:
+    # todo: 使用单例模式
     _default_setting = {
         "scan_dirs"    : [
             "01_工具",

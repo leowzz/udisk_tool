@@ -207,6 +207,7 @@ class MainWindow(QMainWindow):
         self.ui.fontSize.valueChanged.connect(self.change_font_size)
         # 重新扫描文件
         self.ui.action.triggered.connect(self.re_scan)
+        # 更改盘符 todo
 
 
 def gui_start():

@@ -13,6 +13,7 @@ from utils.timer import timer, timer_ns
 
 
 class Scanner:
+    # todo: 使用单例模式
     def __init__(self):
         # 获取日志记录器
         self.logger = get_logger("Scanner", logger_level=setting__.get_log_level())
